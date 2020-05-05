@@ -1,6 +1,6 @@
 # understand_humans
 ## what
-A continuation of the idea of a universal shell. Intended to be simple enough to implement by one person, installable with one command, and useful out of the box. Simple core, extensible architecture. A command line client and a service exposing, over configured data sources: fulltext search, search in structured data, and other services.
+A continuation of the idea of a universal shell. Intended to be simple enough to implement by one person, installable with one command, and useful out of the box. Simple core, extensible architecture. A command line client and a service exposing, over configured data sources: fulltext search, search in structured data, and other services. Iniitally focusing on notes, bookmarks, controlling your computer and discovering new software and data sources.
 
 ## related projects
 https://frdcsa.org/frdcsa/internal/architect https://frdcsa.org/frdcsa/minor/system-recommender https://frdcsa.org/frdcsa/minor/cfo https://github.com/aindilis/cfo/blob/master/example.pl https://frdcsa.org/frdcsa/internal/frdcsal
