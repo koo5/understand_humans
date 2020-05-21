@@ -1,0 +1,108 @@
+understand(?X a 'svelte app') :-
+	?X 'has directory'.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*-----------	
+	
+extractor1:
+	all_instances_of
+	
+---
+
+x y z g1
+g1 private true
+
+
+
+-------
+
+
+skos a autoontology.
+skos source <http://www.w3.org/2004/02/skos/core#>.
+
+
+----------*/
+
+
+
+
+
+
+
+
+
+ann() a batch
+	kind mrkev
+	odruda xxx
+	planted
+	has_update [date 12.12.1212; height [value 12; unit cm]];
+
+
+
+
+
+
+
+
+
+
+----
+
+
+x a renderer
+	params (
+		[name pyco_graph]
+		[name text]
+	);
+	finishme translator1
+	
+	
+
+
+x rendered (
+----
+	
+	
+params(Params,Signature) goal_translator_1 (Code,Code_rest) :-
+	Signature = [X|Xs]
+	X = Name - Value,
+	Code = (param(Params, Name, Value),ys)
+	params(Xs) goal_translator_1 Code_rest.
+	
+"""
+^^^ translates goals of the form:
+		params(P. [
+			arg1 - X,
+			arg2 - YY])
+	into a series of param/3 calls."""
+		
+
+
+
+
+
+
+
+param(Params, Name, Value) :-
+	member(Param, Params),
+	Param name Name,
+	Param value Value.
+	
+	
+	
+	
+---
+optimization:
+	first, facts
+	next, bn field preds:
+		there's probably bigger memory saving in avoiding dead end searches, than in avoiding bnode construction
+	next, rest of preds
+---
