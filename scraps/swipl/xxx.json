@@ -1,0 +1,4 @@
+shell_cmd{
+	'example': 'cvt 2560 1440 50',
+	'syntax': "'cvt ', (width - number), 
+	

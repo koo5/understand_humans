@@ -1,0 +1,18 @@
+
+cmd:transform print(function call) to format(function call)
+tags:python
+{
+	S = python statement under cursor (best effort parse)
+	
+	
+	
+	
+	
+	
+{language} statement under cursort (options):
+{
+	L = line under cursor
+	P = best effort parse {language}
+	
+		
+	

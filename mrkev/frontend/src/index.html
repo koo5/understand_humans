@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MRKEV - Machine Readable Knowledge Editor and Viewer</title>
+
+</head>
+
+<body>
+
+    <div class="mrkev_div">
+
+        <div>
+            <input class="doc_uri_selector" type="text" name="dataset" list="known_datasets" value="http://rdf/dataset1"/>
+            <datalist id="known_datasets">
+                <option value="http://rdf/dataset1">dataset1</option>
+                <option value="dataset2">dataset2</option>
+            </datalist>
+        </div>
+
+        <pre>
+        <div id="editor" contenteditable="true"">
+
+        </div>
+        </pre>
+
+    </div>
+
+    <button onclick="addCode('red')">Add red Stuff</button>
+    <button onclick="addCode('blue')">Add blue Stuff</button>
+    <script>
+
+        document.getElementById("editor").addEventListener("keydown", event => {
+            if (event.isComposing || event.keyCode === 229) return;
+            if (event.keyCode === 9) { // tab key
+                event.preventDefault();  // this will prevent us from tabbing out of the editor
+                if (event.shiftKey) console.log('should unindent');
+                // now insert four non-breaking spaces for the tab key
+                var editor = document.getElementById("editor");
+                var doc = editor.ownerDocument.defaultView;
+                var sel = doc.getSelection();
+                var range = sel.getRangeAt(0);
+
+                var tabNode = document.createTextNode("\t");
+                range.insertNode(tabNode);
+
+                range.setStartAfter(tabNode);
+                range.setEndAfter(tabNode);
+                sel.removeAllRanges();
+                sel.addRange(range);
+            }
+        });
+
+
+        function addCode(cls) {
+            var tag = document.createElement("SPAN");
+            tag.className = cls;
+            tag.innerHTML = "This is the text which has been inserted by JS";
+            tag.dataset.xxx = "yyy";
+            document.getElementById("editor").append(tag);
+        }
+
+        document.getElementById("editor").oninput = function() {log('ggg');};
+
+
+        function log(text) {
+            var div = document.createElement("DIV");
+            div.innerHTML = text;
+            document.getElementById("log").prepend(div);
+        }
+
+    </script>
+    <div id="log" class="log">
+
+
+</body>
+
+</html>
