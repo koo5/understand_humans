@@ -1,0 +1,15 @@
+http://id.loc.gov/vocabulary/preservation/relationshipSubType/sup.html
+https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/replaces
+https://www.ebi.ac.uk/ols/ontologies/swo/properties?iri=http%3A%2F%2Fwww.ebi.ac.uk%2Fswo%2FSWO_0000131
+https://www.ebi.ac.uk/ols/ontologies/swo/terms?iri=http://www.ebi.ac.uk/swo/maturity/SWO_9000069
+
+
+
+<ver:action>^M
+        <ver:assignmentRef ref="ass1" />^M
+        <ver:namespaceRename>^M
+            <fromURI value="http://sbr.gov.au/dims/ActivityCodeType.02.00.dims" />^M
+            <toURI value="http://sbr.gov.au/dims/ActivityCodeType.02.01.dims" />^M
+        </ver:namespaceRename>^M
+        <vercb:conceptRename>^M
+            <vercb...
