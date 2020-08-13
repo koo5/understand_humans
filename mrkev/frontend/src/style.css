@@ -1,20 +1,18 @@
 .log {
-	background-color: tomato;
-	color: white;
-	border: 2px solid black;
+	background-color: #dddddd;
 	margin: 20px;
 	padding: 20px;
-} 
+}
 
 .red {
 	background-color: red;
 	color: white;
-} 
+}
 
 .blue {
 	background-color: blue;
 	color: white;
-} 
+}
 
 h1 {
     color: orange;

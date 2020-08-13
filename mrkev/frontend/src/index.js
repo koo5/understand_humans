@@ -6,7 +6,6 @@ const RDF = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
 const URI_HIERARCHICAL_NOTES = M+'hierarchical_notes';
 const URI_PLAINTEXT = M+'plain_text';
 
-
 function fetch_dataset()
 {
     const url = "dataset1.n3";
