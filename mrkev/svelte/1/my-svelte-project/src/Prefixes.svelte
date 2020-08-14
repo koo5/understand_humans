@@ -1,5 +1,8 @@
 <script>
 
+	import PrefixesListItem from './PrefixesListItem.svelte';
+
+
 	export const prefixes = [
 		{
 			'prefix':'rdf',
@@ -19,7 +22,11 @@
 
 <main>
 	<div class="hello">
-prefixes
+		<ul class="todo-list">
+			{#each $prefixes as item}
+				<PrefixesListItem {item} />
+			{/each}
+		</ul>
 
 	</div>
 </main>

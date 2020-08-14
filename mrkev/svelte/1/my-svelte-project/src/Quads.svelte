@@ -5,7 +5,7 @@
 		this.spog = [s,p,o,g];
 	}
 
-	
+
 
 	Quad.prototype.s = function(){this.spog[0]};
 	Quad.prototype.p = function(){this.spog[1]};
@@ -45,7 +45,14 @@
 */
 
 	function talkAboutThisTriple()
-	{}
+	{
+		const xhr = new XMLHttpRequest();
+		const url = 'http://127.0.0.1:8000';
+
+		xhr.open('GET', url);
+		xhr.onreadystatechange = log;
+		xhr.send();
+	}
 
 
 </script>
@@ -59,7 +66,13 @@
 			<Popover>
 				<span slot=target>
 				<SvelteTooltip tip="why would i want to do that?" bottom >
-					<a href="javascript:;">?</a>
+					/* todo
+					https://github.com/ItalyPaleAle/svelte-spa-router/issues/66
+					https://github.com/sveltejs/svelte/issues/1719
+					https://stackoverflow.com/questions/134845/which-href-value-should-i-use-for-javascript-links-or-javascriptvoid0
+					https://stackoverflow.com/questions/22940761/best-way-to-create-an-a-link-with-empty-href
+					
+					<a href="http://rooot.cz">?</a>
 				</SvelteTooltip>
 				</span>
 

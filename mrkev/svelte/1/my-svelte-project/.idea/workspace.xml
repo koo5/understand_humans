@@ -2,17 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c20b3bb9-75c2-4f60-a778-cf5d0a1a979c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../work_in_progress/browser_editors.notes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../frontend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../frontend/dataset1.n3" beforeDir="false" afterPath="$PROJECT_DIR$/../../../frontend/dataset1.n3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../frontend/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../frontend/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../frontend/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PrefixesListItem.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/rollup.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Prefixes.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/Prefixes.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quads.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quads.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="PrefixesListItem" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
@@ -35,7 +42,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -45,7 +52,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597276995619</updated>
-      <workItem from="1597276997570" duration="14010000" />
+      <workItem from="1597276997570" duration="18688000" />
+      <workItem from="1597364472199" duration="51000" />
     </task>
     <servers />
   </component>
@@ -53,10 +61,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-82" y="-103" key="SettingsEditor" timestamp="1597318853687">
+    <state x="0" y="0" key="SettingsEditor" timestamp="1597362735387">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="-82" y="-103" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1597318853687" />
+    <state x="0" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1597362735387" />
     <state x="302" y="41" width="674" height="678" key="search.everywhere.popup" timestamp="1597328934289">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
