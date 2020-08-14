@@ -1,0 +1,9 @@
+// en.json
+{
+  "prefixes": {
+    "list": {
+      "count": "Homepage",
+      "nav": "Home"
+    }
+  }
+}

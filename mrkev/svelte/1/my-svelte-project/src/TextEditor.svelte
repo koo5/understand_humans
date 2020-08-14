@@ -94,6 +94,7 @@
 
 <main>
 	<div class="hello">
+		document:
 		<pre>
 			<div id="editor" contenteditable="true" on:keydown={onEditorKeydown}>blabla</div>
 		</pre>
@@ -105,5 +106,11 @@
 </main>
 
 <style>
+
+	.hello {
+		margin: 10px;
+		padding: 10px;
+	}
+
 
 </style>

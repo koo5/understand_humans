@@ -1,7 +1,6 @@
 <script>
 
-    export let prefix;
-    //export let uri;
+    export let quad;
 
     function handleRemove(e)
     {
@@ -14,8 +13,8 @@
 
 
     <button class="destroy" title="delete" on:click={handleRemove} data-testid="todo-remove">x</button>
-    <input class="edit" value={prefix.prefix} />
-    <input class="edit" value={prefix.uri} />
+    <input class="edit" value={quad.s} />
+    <input class="edit" value={quad.p} />
 
 
 

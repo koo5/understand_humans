@@ -1,9 +1,13 @@
 <script>
 
+
+	//import { _ } from 'svelte-i18n'
+
+
 	import PrefixesListItem from './PrefixesListItem.svelte';
 
-
-	export const prefixes = [
+	//export const prefixes = [
+	let prefixes = [
 		{
 			'prefix':'rdf',
 			'uri':'http://www.w3.org/1999/02/22-rdf-syntax-ns#'
@@ -18,14 +22,24 @@
 		}
 	];
 
+	let banana = 7;
+
 </script>
 
 <main>
 	<div class="hello">
 		<ul class="todo-list">
-			{#each $prefixes as item}
-				<PrefixesListItem {item} />
+
+			{#if prefixes.length != 0}
+				{prefixes.length} prefixes are defined:
+			{:else}
+				no prefixes are defined.
+			{/if}
+
+			{#each prefixes as item}
+				<PrefixesListItem prefix={item} />
 			{/each}
+
 		</ul>
 
 	</div>
