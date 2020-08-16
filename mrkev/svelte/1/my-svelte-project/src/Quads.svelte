@@ -3,20 +3,6 @@
 	import Popover from 'svelte-popover';
 	import QuadsListItem from './QuadsListItem.svelte';
 
-	/*
-        function test(arg1, arg2 = undefined)
-        {
-            if(arguments.length == 1)
-            {
-                // it must be a string of the form "prefix:name"
-
-            }
-            else
-            console.log(arguments.length)
-            console.log(arguments)
-        }
-
-        test(1, undefined);*/
 
 	/* shortened URI */
 	class Suri
@@ -25,8 +11,12 @@
 		{
 			if(arguments.length == 1)
 				[prefix, name] = prefix.split(':');
-			this.prefix = prefix
-			this.name = name
+			this.prefix = prefix;
+			this.name = name;
+		}
+		toString()
+		{
+			return this.prefix + ":" + this.name;
 		}
 	};
 
@@ -39,14 +29,23 @@
 
 	class Quad
 	{
-		constructor(s,p,o,g)
+		constructor(subject,p,o,g)
 		{
-			this.spog = [s,p,o,g];
+			this.spog = [subject,p,o,g];
+			console.log('Quad constructed:');
+			console.log(this);
+
+		}
+		get s(){return this.spog[0]};
+		set s(x){
+			console.log('s setter this:');
+			console.log(this);
+			this.spog[0] = x;
 		}
 	}
 
 
-	Quad.prototype.s = function(){this.spog[0]};
+	//Quad.prototype.s = function(){this.spog[0]};
 	Quad.prototype.p = function(){this.spog[1]};
 	Quad.prototype.o = function(){this.spog[2]};
 	Quad.prototype.g = function(){this.spog[3]};
@@ -64,11 +63,11 @@
 				new Suri('', 'q0'),
 				new Suri('','default')),
 
-		new Quad(
+/*		new Quad(
 				new Suri('','q0'),
 				new Suri('rdfq','contains'),
 				new Suri('', 'q0'),
-				new Suri('','default'))
+				new Suri('','default'))*/
 		];
 
 
@@ -112,18 +111,17 @@
 
 			<Popover>
 				<span slot=target>
-				<SvelteTooltip tip="why would i want to do that?" bottom >
-					<!-- todo
-					https://github.com/ItalyPaleAle/svelte-spa-router/issues/66
-					https://github.com/sveltejs/svelte/issues/1719
-					https://stackoverflow.com/questions/134845/which-href-value-should-i-use-for-javascript-links-or-javascriptvoid0
-					https://stackoverflow.com/questions/22940761/best-way-to-create-an-a-link-with-empty-href
-					-->
+					<SvelteTooltip tip="why would i want to do that?" bottom >
+						<!-- todo
+						https://github.com/ItalyPaleAle/svelte-spa-router/issues/66
+						https://github.com/sveltejs/svelte/issues/1719
+						https://stackoverflow.com/questions/134845/which-href-value-should-i-use-for-javascript-links-or-javascriptvoid0
+						https://stackoverflow.com/questions/22940761/best-way-to-create-an-a-link-with-empty-href
+						-->
 
-					<a href="http://rooot.cz">?</a>
-				</SvelteTooltip>
+						<a href="http://rooot.cz">?</a>
+					</SvelteTooltip>
 				</span>
-
 				<span slot=content>
 					<h4>why would i want to do that?</h4>
 					This button gives the triple it's own context/graph, which in effect becomes a unique identifier of this triple.
@@ -140,7 +138,6 @@
 				</span>
 			</Popover>
 		</span>
-
 	</div>
 </main>
 

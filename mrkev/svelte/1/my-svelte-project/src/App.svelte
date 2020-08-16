@@ -1,4 +1,7 @@
 <script>
+	import { log_store } from './log_store.js';
+
+
 	//(!) Plugin svelte: App has unused export property 'prefixes'. If it is for external reference only, please consider using `export const prefixes`
 	//export let prefixes;
 	import TextEditor from './TextEditor.svelte';
@@ -13,7 +16,13 @@
 	<hr>
 	<Quads></Quads>
 	log:
-	<div id="log" class="log"></div>
+	<div class="log">
+		{#each $log_store as item}
+			<div class="log_item">
+				{item}
+			</div>
+		{/each}
+	</div>
 </main>
 
 <style>
