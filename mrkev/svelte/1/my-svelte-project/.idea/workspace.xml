@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c20b3bb9-75c2-4f60-a778-cf5d0a1a979c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Quad.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/log_store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RdfNodeEditor.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Rdfq.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/quads.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Quads.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quads.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/QuadsListItem.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/QuadsListItem.svelte" afterDir="false" />
     </list>
@@ -19,6 +21,8 @@
       <list>
         <option value="PrefixesListItem" />
         <option value="Quad" />
+        <option value="Rdfq" />
+        <option value="RdfNodeEditor" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -44,7 +48,8 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -56,7 +61,7 @@
       <updated>1597276995619</updated>
       <workItem from="1597276997570" duration="18688000" />
       <workItem from="1597364472199" duration="1744000" />
-      <workItem from="1597424295494" duration="18916000" />
+      <workItem from="1597424295494" duration="29516000" />
     </task>
     <servers />
   </component>
@@ -64,14 +69,32 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1280" y="720" key="SettingsEditor" timestamp="1597424841145">
-      <screen x="1280" y="720" width="1280" height="720" />
+    <state width="1252" height="177" key="GridCell.Tab.0.bottom" timestamp="1597607000460">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1252" height="177" key="GridCell.Tab.0.bottom/1280.720.1280.720/0.0.1280.720/2560.1440.1280.720@0.0.1280.720" timestamp="1597607000460" />
+    <state width="1252" height="177" key="GridCell.Tab.0.center" timestamp="1597607000460">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1252" height="177" key="GridCell.Tab.0.center/1280.720.1280.720/0.0.1280.720/2560.1440.1280.720@0.0.1280.720" timestamp="1597607000460" />
+    <state width="1252" height="177" key="GridCell.Tab.0.left" timestamp="1597607000459">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1252" height="177" key="GridCell.Tab.0.left/1280.720.1280.720/0.0.1280.720/2560.1440.1280.720@0.0.1280.720" timestamp="1597607000459" />
+    <state width="1252" height="177" key="GridCell.Tab.0.right" timestamp="1597607000460">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1252" height="177" key="GridCell.Tab.0.right/1280.720.1280.720/0.0.1280.720/2560.1440.1280.720@0.0.1280.720" timestamp="1597607000460" />
+    <state x="0" y="0" key="SettingsEditor" timestamp="1597702487014">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="0" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1597362735387" />
+    <state x="0" y="0" key="SettingsEditor/1280.720.1280.720/0.0.1280.720/2560.1440.1280.720@0.0.1280.720" timestamp="1597702487014" />
     <state x="1280" y="720" key="SettingsEditor/1280.720.1280.720/0.0.1280.720/2560.1440.1280.720@1280.720.1280.720" timestamp="1597424841145" />
-    <state x="302" y="41" width="674" height="678" key="search.everywhere.popup" timestamp="1597328934289">
+    <state x="302" y="41" width="674" height="678" key="search.everywhere.popup" timestamp="1597703741249">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="302" y="41" width="674" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1597328934289" />
+    <state x="302" y="41" width="674" height="678" key="search.everywhere.popup/1280.720.1280.720/0.0.1280.720/2560.1440.1280.720@0.0.1280.720" timestamp="1597703741249" />
   </component>
 </project>

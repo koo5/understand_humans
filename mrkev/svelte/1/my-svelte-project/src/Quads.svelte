@@ -2,53 +2,9 @@
 	import SvelteTooltip from 'svelte-tooltip';
 	import Popover from 'svelte-popover';
 	import QuadsListItem from './QuadsListItem.svelte';
-
+	import {Suri} from './quads.js';
 
 	/* shortened URI */
-	class Suri
-	{
-		constructor(prefix, name=undefined)
-		{
-			if(arguments.length == 1)
-				[prefix, name] = prefix.split(':');
-			this.prefix = prefix;
-			this.name = name;
-		}
-		toString()
-		{
-			return this.prefix + ":" + this.name;
-		}
-	};
-
-	/* full URI */
-	class Furi {
-		constructor(uri) {
-			this.uri = uri;
-		}
-	};
-
-	class Quad
-	{
-		constructor(subject,p,o,g)
-		{
-			this.spog = [subject,p,o,g];
-			console.log('Quad constructed:');
-			console.log(this);
-
-		}
-		get s(){return this.spog[0]};
-		set s(x){
-			console.log('s setter this:');
-			console.log(this);
-			this.spog[0] = x;
-		}
-	}
-
-
-	//Quad.prototype.s = function(){this.spog[0]};
-	Quad.prototype.p = function(){this.spog[1]};
-	Quad.prototype.o = function(){this.spog[2]};
-	Quad.prototype.g = function(){this.spog[3]};
 
 /*
 	export let quads = [
@@ -88,7 +44,7 @@
 </script>
 
 <main>
-	<div class="hello">
+	<div>
 
 		<ul>
 
