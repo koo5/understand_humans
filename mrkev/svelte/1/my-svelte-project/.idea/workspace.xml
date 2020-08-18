@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c20b3bb9-75c2-4f60-a778-cf5d0a1a979c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/quad_store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Log.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quads.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quads.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuadsListItem.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/QuadsListItem.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RdfNodeEditor.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/RdfNodeEditor.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TextEditor.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextEditor.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quads.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/quads.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +24,7 @@
         <option value="Rdfq" />
         <option value="RdfNodeEditor" />
         <option value="JavaScript File" />
+        <option value="Log" />
       </list>
     </option>
   </component>
@@ -68,7 +68,7 @@
       <updated>1597276995619</updated>
       <workItem from="1597276997570" duration="18688000" />
       <workItem from="1597364472199" duration="1744000" />
-      <workItem from="1597424295494" duration="45303000" />
+      <workItem from="1597424295494" duration="46023000" />
     </task>
     <servers />
   </component>

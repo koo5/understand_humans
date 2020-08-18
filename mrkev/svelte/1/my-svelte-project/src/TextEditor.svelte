@@ -88,7 +88,7 @@
 </script>
 
 <main>
-	<div class="hello">
+	<div class="text_editor">
 		document:
 		<pre>
 			<div id="editor" contenteditable="true" on:keydown={onEditorKeydown}>blabla</div>
@@ -102,9 +102,9 @@
 
 <style>
 
-	.hello {
-		margin: 10px;
-		padding: 10px;
+	.text_editor {
+		margin: 1px;
+		padding: 1px;
 	}
 
 

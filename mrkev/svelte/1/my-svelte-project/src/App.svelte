@@ -7,32 +7,22 @@
 	import TextEditor from './TextEditor.svelte';
 	import Prefixes from './Prefixes.svelte';
 	import Quads from './Quads.svelte';
+	import Log from './Log.svelte';
 </script>
 
 <main>
-	<Prefixes></Prefixes>
-	<hr>
 	<TextEditor></TextEditor>
 	<hr>
 	<Quads></Quads>
 	<hr>
-	log:
-	<div class="log">
-		{#each $log_store as item}
-			<div class="log_item">
-				{item}
-			</div>
-		{/each}
-	</div>
+	<Log></Log>
+	<hr>
+	<Prefixes></Prefixes>
+
 </main>
 
 <style>
 
-	.log {
-		background-color: #dddddd;
-		margin: 2px;
-		padding: 2px;
-	}
 
 	main {
 	}

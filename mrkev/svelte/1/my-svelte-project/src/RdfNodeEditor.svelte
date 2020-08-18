@@ -33,7 +33,7 @@
 				</span>
 				<span slot=content>
                     {#each errors as error}
-                        <dir>{error}</dir>
+                        <dir>{error.errors}</dir>
                     {/each}
 				</span>
 			</Popover>
