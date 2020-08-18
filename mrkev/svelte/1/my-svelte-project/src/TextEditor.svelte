@@ -1,5 +1,8 @@
 <script>
 
+	import {Suri, Quad, Literal} from './quads.js';
+    import { log } from './log_store.js';
+    import { add_quad } from './quad_store.js';
 	import { saveAs } from 'file-saver';
 
 	function saveText()
@@ -41,7 +44,7 @@
 
 	function generate_unique_uri(suffix = "uri")
 	{
-		return "uri_" + (++last_unique_uri_number).toString() + "_" + suffix;
+		return new Suri('', "uri_" + (++last_unique_uri_number).toString() + "_" + suffix);
 	}
 
 	function uri(text)
@@ -53,10 +56,13 @@
 	{
 		const span = wrap_selection();
 		span.dataset.uri = generate_unique_uri('span');
-		add_triple(
+		add_quad(
+			new Quad(
 				span.dataset.uri,
-				uri('mrkev:value'),
-				text_of_span(span)
+				new Suri('mrkev','value'),
+				new Literal(text_of_span(span)),
+				new Suri('','default')
+			)
 		);
 	}
 
@@ -77,17 +83,6 @@
 		// the problem is that the text can span across "physical" elements...automatically inserted divs, brs..
 		range.surroundContents(span);
 		return span;
-	}
-
-	function log(text) {
-		var div = document.createElement("DIV");
-		div.innerHTML = text;
-		document.getElementById("log").prepend(div);
-	}
-
-	function add_triple(s,p,o)
-	{
-		log(s + " " + p + " " + o);
 	}
 
 </script>

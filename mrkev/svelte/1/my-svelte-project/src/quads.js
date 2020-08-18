@@ -7,7 +7,7 @@ export class Literal
 		}
 		toString()
 		{
-			return '"' + this.uri + '"';
+			return '"' + this.value + '"';
 		}
 	}
 
@@ -117,12 +117,11 @@ export class Literal
 			const errors = results.filter(r=>'errors' in r);
 			return {'errors': errors}
 		}
-	/*	if ('value' in r) return r;
-			errors = errors.concat(r.errors);
-			return false
-		});
-		return {'errors':errors}*/
 	}
+
+	/*
+	https://www.w3.org/2000/10/swap/rdfn3.g
+	 */
 
 	function parse_rdf_furi(x)
 	{
