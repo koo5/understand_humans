@@ -4,5 +4,6 @@ export const log_store = writable([]);
 
 export function log(x)
 {
-    store.prepend(x);
+    console.log(x);
+    log_store.update(old_state=>[x].concat(old_state));
 }

@@ -1,5 +1,9 @@
 <script>
 
+	import SvelteTooltip from 'svelte-tooltip';
+	import Popover from 'svelte-popover';
+
+
     import {rdf_node_parsing_result} from './quads.js';
     export let node;
     let errors = null;
@@ -11,12 +15,34 @@
             errors = r.errors;
     	else {
 			errors = null;
-			node = r.value;
+			if (node !== r.value)
+				node = r.value;
 		}
 	}
 
 </script>
+
     <input class="edit" value={node} on:input={change} />
-        {#if (errors != null)}
-             * {errors}
+ 		{#if (errors != null)}
+			<Popover overlayColor=#ffffff90>
+
+				<span slot=target>
+					<SvelteTooltip tip="parsing error" bottom >
+						<img class="icon" src="icons/warning.svg" alt="warning"/>
+					</SvelteTooltip>
+				</span>
+				<span slot=content>
+                    {#each errors as error}
+                        <dir>{error}</dir>
+                    {/each}
+				</span>
+			</Popover>
         {/if}
+
+<style>
+	.icon {
+		width: 1em;
+		height: 1em;
+	}
+
+</style>

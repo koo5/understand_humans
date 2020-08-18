@@ -2,7 +2,7 @@
 	import SvelteTooltip from 'svelte-tooltip';
 	import Popover from 'svelte-popover';
 	import QuadsListItem from './QuadsListItem.svelte';
-	import {Suri} from './quads.js';
+	import {Suri, Quad} from './quads.js';
 
 	/* shortened URI */
 
@@ -65,7 +65,7 @@
 		<span>
 			<button on:click={talkAboutThisTriple}>talk about this triple</button>
 
-			<Popover>
+			<Popover overlayColor=#ffffff90>
 				<span slot=target>
 					<SvelteTooltip tip="why would i want to do that?" bottom >
 						<!-- todo

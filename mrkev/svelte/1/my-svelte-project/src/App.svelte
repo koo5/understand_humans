@@ -15,6 +15,7 @@
 	<TextEditor></TextEditor>
 	<hr>
 	<Quads></Quads>
+	<hr>
 	log:
 	<div class="log">
 		{#each $log_store as item}

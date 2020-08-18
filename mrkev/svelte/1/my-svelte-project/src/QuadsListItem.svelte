@@ -13,7 +13,7 @@
     function changeQuad()
     {
         //let quad = quad[0];
-        quad.s = quad.s + '!';
+        quad.s = quad.s + 'XXX';
     }
     function logQuad()
     {
@@ -26,13 +26,13 @@
 <li>
 
 
-    <button class="destroy" title="delete" on:click={handleRemove} data-testid="todo-remove">x</button>
-
-    <RdfNodeEditor node={quad.s}></RdfNodeEditor>
-
-
-    <button title="log" on:click={logQuad}>logQuad</button>
-    <button title="test" on:click={changeQuad}>changeQuad</button>
+    <button class="destroy" title="delete" on:click={handleRemove}>x</button>
+    <RdfNodeEditor bind:node={quad.s}></RdfNodeEditor>
+    <RdfNodeEditor bind:node={quad.p}></RdfNodeEditor>
+    <RdfNodeEditor bind:node={quad.o}></RdfNodeEditor>
+    <RdfNodeEditor bind:node={quad.g}></RdfNodeEditor>
+    <button title="logQuad" on:click={logQuad}>logQuad</button>
+    <button title="changeQuad" on:click={changeQuad}>changeQuad</button>
 
 
 
