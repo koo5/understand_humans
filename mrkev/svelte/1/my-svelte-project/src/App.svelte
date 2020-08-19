@@ -26,7 +26,9 @@
 	<hr>
 	<Prefixes></Prefixes>
 	<hr>
-	help: <a href="https://github.com/koo5/understand_humans/blob/master/mrkev/frontend/README.md">readme</a> <a href="https://github.com/koo5/understand_humans/blob/master/mrkev/scenario1.md">scenario1</a> <a href="https://github.com/koo5/understand_humans/blob/master/mrkev/scenario2.md">scenario2</a>
+	help: <a href="https://github.com/koo5/understand_humans/blob/master/mrkev/svelte/1/my-svelte-project/README.md">readme</a>
+	<a href="https://github.com/koo5/understand_humans/blob/master/mrkev/svelte/1/my-svelte-project/docs/scenario1.md">scenario1</a>
+	<a href="https://github.com/koo5/understand_humans/blob/master/mrkev/svelte/1/my-svelte-project/docs/scenario2.md">scenario2</a>
 	<hr>
 </main>
 
