@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c20b3bb9-75c2-4f60-a778-cf5d0a1a979c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../frontend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../scenario1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../scenario2.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Log.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/Log.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Prefixes.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/Prefixes.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrefixesListItem.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrefixesListItem.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quads.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quads.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TextEditor.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextEditor.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +65,7 @@
       <updated>1597276995619</updated>
       <workItem from="1597276997570" duration="18688000" />
       <workItem from="1597364472199" duration="1744000" />
-      <workItem from="1597424295494" duration="50107000" />
+      <workItem from="1597424295494" duration="50271000" />
     </task>
     <servers />
   </component>

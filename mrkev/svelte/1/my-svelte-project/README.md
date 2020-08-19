@@ -1,4 +1,4 @@
-# MRKEV - Mixed Rdf Knowledge Editor and Viewer
+# MRKEV - Markup Rdf Knowledge Editor and Viewer
 
 ### resources
 #### hypertext and semantic web
@@ -6,7 +6,7 @@ https://monoskop.org/images/b/be/Nelson_Ted_Literary_Machines_c1987_chs_0-1.pdf
 
 
 ### about
-[docs/scenario1.md] and (docs/scenario2.md) provide some clues.
+[docs/scenario1.md](docs/scenario1.md) and [docs/scenario2.md](docs/scenario2.md) provide some clues.
 
 
 ### what to implement - first thoughts
