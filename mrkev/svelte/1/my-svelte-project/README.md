@@ -8,6 +8,10 @@ https://monoskop.org/images/b/be/Nelson_Ted_Literary_Machines_c1987_chs_0-1.pdf
 ### about
 [docs/scenario1.md](docs/scenario1.md) and [docs/scenario2.md](docs/scenario2.md) provide some clues.
 
+### similar projects
+http://say-editor.com
+* mrkev aims to support hypergraphs, while say-editor is more of a lightweight RDFa markup tool
+* say-editor has a nice plugin system for automatic detection of machine-interpretable parts of text and providing specialized micro-editors, mrkev should try to re-use these plugins
 
 ### what to implement - first thoughts
 1) select some text in the editor area.

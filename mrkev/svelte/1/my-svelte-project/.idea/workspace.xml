@@ -66,6 +66,7 @@
       <workItem from="1597276997570" duration="18688000" />
       <workItem from="1597364472199" duration="1744000" />
       <workItem from="1597424295494" duration="50271000" />
+      <workItem from="1597819034819" duration="312000" />
     </task>
     <servers />
   </component>
@@ -115,7 +116,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/quads.js</url>
           <line>142</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
