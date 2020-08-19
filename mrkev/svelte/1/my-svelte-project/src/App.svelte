@@ -18,7 +18,8 @@
 	<Log></Log>
 	<hr>
 	<Prefixes></Prefixes>
-
+	<hr>
+	help: <a href="https://github.com/koo5/understand_humans/blob/master/mrkev/frontend/README.md">readme</a> <a href="https://github.com/koo5/understand_humans/blob/master/mrkev/scenario1.md">scenario1</a> <a href="https://github.com/koo5/understand_humans/blob/master/mrkev/scenario2.md">scenario2</a>
 </main>
 
 <style>
