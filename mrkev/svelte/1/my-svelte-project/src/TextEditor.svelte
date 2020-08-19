@@ -85,6 +85,11 @@
 		return span;
 	}
 
+	function saveAll()
+	{
+		
+	}
+
 </script>
 
 <div class="text_editor">
