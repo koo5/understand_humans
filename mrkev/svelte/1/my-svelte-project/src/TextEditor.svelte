@@ -87,27 +87,22 @@
 
 	function saveAll()
 	{
-		
+
 	}
 
 </script>
 
 <div class="text_editor">
-	document:
+	text document:
 	<pre>
 		<div id="editor" contenteditable="true" on:keydown={onEditorKeydown}>blabla</div>
 	</pre>
-	<button on:click={makeSpan}>surroundContents()</button>
+	<button on:click={makeSpan}>selection to rdf</button>
 	<button on:click={saveText}>saveText</button>
 	<button on:click={saveAll}>saveAll</button>
 </div>
 
 <style>
-
-	.text_editor {
-		margin: 1px;
-		padding: 1px;
-	}
 
 
 </style>

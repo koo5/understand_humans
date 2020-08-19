@@ -1,11 +1,11 @@
 <script>
+    import { log } from './log_store.js';
 
     export let prefix;
-    //export let uri;
 
     function handleRemove(e)
     {
-        console.log(e);
+        log(e);
     }
 
 </script>
@@ -13,7 +13,7 @@
 <li>
 
 
-    <button class="destroy" title="delete" on:click={handleRemove} data-testid="todo-remove">x</button>
+    <button class="destroy" title="delete" on:click={handleRemove}>x</button>
     <input class="edit" value={prefix.prefix} />
     <input class="edit" value={prefix.uri} />
 

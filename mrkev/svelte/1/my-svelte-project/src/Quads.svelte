@@ -7,24 +7,20 @@
 
 </script>
 
-<main>
-	<div>
+<div>
+	{#if $quad_store.length != 0}
+		store contains {$quad_store.length} quads:
+	{:else}
+		store is empty.
+	{/if}
 
-		<ul>
+	<ul>
 
-			{#if $quad_store.length != 0}
-				store contains {$quad_store.length} quads:
-			{:else}
-				store is empty.
-			{/if}
-
-			{#each $quad_store as item}
-				<QuadsListItem quad={item} />
-			{/each}
-
-		</ul>
-	</div>
-</main>
+		{#each $quad_store as item}
+			<QuadsListItem quad={item} />
+		{/each}
+	</ul>
+</div>
 
 <style>
 

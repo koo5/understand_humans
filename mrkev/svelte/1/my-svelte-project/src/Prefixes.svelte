@@ -22,29 +22,21 @@
 		}
 	];
 
-	let banana = 7;
-
 </script>
 
-<main>
-	<div class="hello">
-		<ul class="todo-list">
+<div>
+	{#if prefixes.length != 0}
+		{prefixes.length} prefixes are defined:
+	{:else}
+		no prefixes are defined.
+	{/if}
+	<ul>
+		{#each prefixes as item}
+			<PrefixesListItem prefix={item} />
+		{/each}
 
-			{#if prefixes.length != 0}
-				{prefixes.length} prefixes are defined:
-			{:else}
-				no prefixes are defined.
-			{/if}
-
-			{#each prefixes as item}
-				<PrefixesListItem prefix={item} />
-			{/each}
-
-		</ul>
-
-	</div>
-</main>
-
+	</ul>
+</div>
 <style>
 
 </style>
