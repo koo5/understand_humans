@@ -1,3 +1,15 @@
+@base <https://rdf.lodgeit.net.au/uh1/doc>
+@prefix doc: <https://rdf.lodgeit.net.au/uh1/doc>
+
+
+
+
+http://www.ebi.ac.uk/swo/SWO_0004006 owl:sameAs doc:
+
+
+
+
+
 http://id.loc.gov/vocabulary/preservation/relationshipSubType/sup.html
 https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/replaces
 https://www.ebi.ac.uk/ols/ontologies/swo/properties?iri=http%3A%2F%2Fwww.ebi.ac.uk%2Fswo%2FSWO_0000131
@@ -13,3 +25,8 @@ https://www.ebi.ac.uk/ols/ontologies/swo/terms?iri=http://www.ebi.ac.uk/swo/matu
         </ver:namespaceRename>^M
         <vercb:conceptRename>^M
             <vercb...
+
+
+
+
+

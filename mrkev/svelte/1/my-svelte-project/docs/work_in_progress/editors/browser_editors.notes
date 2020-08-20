@@ -26,4 +26,16 @@ wrong tabbing behavior
 	
 	https://medv.io/codejar/
 		unless configurable?
+
+
+
+^^^^^^^ =
+n1 a note; value "wrong tabbing behavior"; children (
+	[a note; value "https://jsfiddle.net/"; about [a sw; homepage "https://jsfiddle.net/"]; children (
+		[a note; value "unless configurable?"])]
+	..
+n1 a note; value "wrong tabbing behavior"; children (
+	[a note; value "https://jsfiddle.net/"; about [a sw; homepage "https://jsfiddle.net/"]; children (
+		[a note; value "unless configurable?"])]
 	
+

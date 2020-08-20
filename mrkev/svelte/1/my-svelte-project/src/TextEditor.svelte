@@ -5,6 +5,15 @@
     import { add_quad } from './quad_store.js';
 	import { saveAs } from 'file-saver';
 
+	function addCode(cls) {
+		var tag = document.createElement("SPAN");
+		tag.className = cls;
+		tag.innerHTML = "This is the text which has been inserted by JS";
+		tag.dataset.xxx = "yyy";
+		document.getElementById("editor").append(tag);
+	}
+
+
 	function saveText()
 	{
 		const editor = document.getElementById("editor");
@@ -90,12 +99,14 @@
 
 	}
 
+
+
 </script>
 
 <div class="text_editor">
 	text document:
 	<pre>
-		<div id="editor" contenteditable="true" on:keydown={onEditorKeydown}>blabla</div>
+		<div id="editor" contenteditable="true" on:keydown={onEditorKeydown}>blabla\n\tbla\n\tbla\n\t\tbla</div>
 	</pre>
 	<button on:click={makeSpan}>selection to rdf</button>
 	<button on:click={saveText}>saveText</button>

@@ -1,7 +1,0 @@
-@base <https://rdf.lodgeit.net.au/uh1/doc>
-@prefix doc: <https://rdf.lodgeit.net.au/uh1/doc>
-
-
-
-
-http://www.ebi.ac.uk/swo/SWO_0004006 owl:sameAs doc:
