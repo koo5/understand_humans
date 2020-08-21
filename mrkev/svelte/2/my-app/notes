@@ -1,0 +1,6 @@
+./node_modules/.bin/ava -c 1  -s  -t -T 30s  -v --fail-fast
+npm set progress=true
+pm i typescript ava
+npm i @ava/babel
+npm i ts-node
+npm init ava

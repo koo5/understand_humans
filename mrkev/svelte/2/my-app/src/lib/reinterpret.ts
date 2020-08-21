@@ -5,16 +5,15 @@ function reinterpret_as_hierarchical_notes(text:string)
 	const lines = text.split('\n');
 	lines.forEach((line) =>
 	{
-		indent(line)
+		indents(line)
 
-	}
-
+	});
 }
 
 /*
 get number of tabs at beginning of string
  */
-function indents(line:string): number
+export function indents(line:string): number
 {
 	let result = 0;
 	while(true)
@@ -25,6 +24,7 @@ function indents(line:string): number
 			line = line.substring(1)
 			result++;
 		}
+		else break;
 	}
 	return result;
 }
