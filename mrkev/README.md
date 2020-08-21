@@ -1,21 +1,49 @@
 # MRKEV - Markup Rdf Knowledge Editor and Viewer
 
-### resources
-#### hypertext and semantic web
-https://monoskop.org/images/b/be/Nelson_Ted_Literary_Machines_c1987_chs_0-1.pdf
-
-
-### about
+## usage scenarios
 [docs/scenario1.md](docs/scenario1.md) and [docs/scenario2.md](docs/scenario2.md) provide some clues.
 
-### similar projects
+## current version
+development currently happens in [mrkev/svelte/2/my-app](mrkev/svelte/2/my-app)
+
+## these pieces are being worked out:
+	### a quad store
+		saving/loading with N3.js. UI components for editing quads and prefixes. 
+		
+	### RDFQ
+		RdfqSupergraph is a quadstore proxy that implements reasoning with rdfq:is-supergraph-of. It is a layer above the quad store that makes it easy to work with triples that:
+			a) are referenced by other triples - they have their own triple id/context/graph
+			b) are also a part of some graph.
+		Should be compatible with RDF*.
+	
+	### Ldo
+		a pseudo-ORM, a simple wrapper around Json-LD, using contexts to semiautomatically turn triples into javascript objects and back
+		
+	### reinterpret
+		turn a tab-indented text with hierarchical notes into a rdf description of that hierarchy.
+		
+	### TextEditor
+		using contenteditable to edit text. Buttons to mark up pieces of text, and link them to literals asserted in the store. Adding a two-way synchronization is possible. These annotated pieces are called Spans. Additional assertions can be created about Spans. Hierarchical notes are composed of Spans too.  
+		Saving/loading of a rdf representation of the text, along with all quads.
+		
+	### notes tree
+		a viewer of hierarchical notes as a tree.
+		
+	### QV
+		Quad Viewer - similar to some other templating projects (https://github.com/koo5/hackery2/blob/master/src/data/notes/rdf_visualization.txt)
+		The difference is support for hypergraphs. Generic rdf exploration as well as hardcoded renderers for our domain-specific object types.
+
+## resources
+### hypertext and semantic web
+https://monoskop.org/images/b/be/Nelson_Ted_Literary_Machines_c1987_chs_0-1.pdf
+
+## similar projects
 http://say-editor.com
 * mrkev aims to support hypergraphs, while say-editor is more of a lightweight RDFa markup tool
 * say-editor has a nice plugin system for automatic detection of machine-interpretable parts of text and providing specialized micro-editors, mrkev should try to re-use these plugins
 
-### what to implement - first thoughts
+## what to implement - first thoughts
 1) select some text in the editor area.
-
 
 2) click "make span"
 
@@ -25,108 +53,52 @@ this will make sure that the text is wrapped in a <span> element, an uri is gene
 
 basic quads management.
 
-
-
-# original svelte app template documentation
-*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
-
----
-
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
-
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
+## notes
+this note is also an example of my hierarchical notes structure:
 ```
+frontend editors tabbing behavior
 
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+
+	right tabbing behavior
+		https://microsoft.github.io/monaco-editor/index.html
+
+		https://ace.c9.io/
+
+		https://www.cdolivet.com/editarea/editarea/exemples/exemple_full.html
+			almost, it also indents the line where the cursor is, in addition to selected lines.
+
+		https://repl.it/
+			change setting to tabs
+			somewhat weird behavior in cursor position after selection is dismissed
+
+		https://icecoder.net/
+			(probably), change setting to tabs
+
+		https://codemirror.net/
+			probably, change setting to tabs and see https://github.com/codemirror/CodeMirror/issues/2428
 
 
-## Get started
+	wrong tabbing behavior
+		https://jsfiddle.net/
+			unless configurable?
 
-Install the dependencies...
+		https://www.gitpod.io/
+			unless configurable?
 
-```bash
-cd svelte-app
-npm install
+		https://medv.io/codejar/
+			unless configurable?
+
+	?
+		http://say-editor.com
 ```
-
-...then start [Rollup](https://rollupjs.org):
-
-```bash
-npm run dev
+it would be rdf-ized like this:
 ```
+n1 a note; value "wrong tabbing behavior"; children (
+    [a note; value "https://jsfiddle.net/"; about [a sw; homepage "https://jsfiddle.net/"]; children (
+        [a note; value "unless configurable?"])]
+    ..
+n1 a note; value "wrong tabbing behavior"; children (
+    [a note; value "https://jsfiddle.net/"; about [a sw; homepage "https://jsfiddle.net/"]; children (
+        [a note; value "unless configurable?"])]
 
-Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
-
-By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
-
-
-## Building and running in production mode
-
-To create an optimised version of the app:
-
-```bash
-npm run build
-```
-
-You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
-
-
-## Single-page app mode
-
-By default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
-
-If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `"start"` command in package.json:
-
-```js
-"start": "sirv public --single"
-```
-
-## Using TypeScript
-
-This template comes with a script to set up a TypeScript development environment, you can run it immediately after cloning the template with:
-
-```bash
-node scripts/setupTypeScript.js
-```
-
-Or remove the script via:
-
-```bash
-rm scripts/setupTypeScript.js
-```
-
-## Deploying to the web
-
-### With [Vercel](https://vercel.com)
-
-Install `vercel` if you haven't already:
-
-```bash
-npm install -g vercel
-```
-
-Then, from within your project folder:
-
-```bash
-cd public
-vercel deploy --name my-project
-```
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public my-project.surge.sh
 ```
