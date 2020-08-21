@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uh1
+    xmlns:doc="https://rdf.lodgeit.net.au/uh1/doc"
+    this="https://rdf.lodgeit.net.au/uh1/doc1"
+    xmlns="https://rdf.lodgeit.net.au/uh1/doc1"
+>
+
+<prefix prefix="this" uri="https://rdf.lodgeit.net.au/uh1/notes1"/>
+<prefix prefix="doc" uri="https://rdf.lodgeit.net.au/uh1/doc"/>
+
+<rdf s="doc:sw_has_homepage" p="rdfs:subPropertyOf" o="http://www.ebi.ac.uk/swo/SWO_0004006"/>
+
+<rdf s="this:#" p="doc:note">see also rdf_forms.txt, augmented_text.txt</rdf>
+
+rdf:
+	explore,visualize,edit,manage
+		note:
+			there is kind of a continuum starting from dealing with bare triples:
+				strictly: management of graph and rdf-based data in a generic way
+					Just nodes and edges:
+						sw that deals with graphs in the mathematical sense, mostly represented by tools for "property graph" databases, ie, neo4j. Rdf is more expressive and can map to this only partially.
+					sw aware of contexts(graphs):
+						for example <a href="this#gruff">gruff</a>.
+					sw that includes special functionality for managing rdf lists (still in a non-domain-specific way).
+						none found yet, but not so hard to implement
+					less common/new idioms:
+						dealing with properties of graphs / properties of triples i ntelligently, understanding nested graphs/contexts
+				less strictly:
+					sw for managing domain-specific data, where rdf is largely just a storage mechanism, "templating systems".
+				even less strictly, could be said: starting from freeform text, progressively adding stronger semantics, and not losing the implicit information hidden in the form...
+
+
+		software, roughly ordered by immediate relevance:
+            <mint_subject>
+            <rdf p="doc:sw_has_homepage">https://www.tomsawyer.com/graph-database-browser/</rdf>
+				recommended?
+				viewing/explorations
+            </mint_subject>
+
+			<mint_subject>
+            <rdf p="doc:sw_has_name">yED</rdf>
+				recommended, but probably chokes on 10k+ nodes
+				https://www.yworks.com/products/yed/download#download
+				automatic layouting
+				how to export into it:
+					we need to do it in a streaming fashion:
+
+					pyyed:
+						chokes on 1000+ triples
+					best to save our stuff as graphml, that's a xml format comparable to graphviz's.
+                        https://www.swi-prolog.org/pack/file_details/graphml/prolog/
+graphml_ugraph.pl
+                            is of no use because it only uses "ugraphs", undirected graphs
+					maybe use networkx in python?
+						https://stackoverflow.com/questions/51048833/networkx-exporting-graphml-with-edge-labels-height-and-width-attributes-cust
+
+            </mint_subject>
+
+
+            <rdf s="this#gruff">
+            allegro graph + gruff + agraph webview:
+                <rdf p="doc:sw_has_homepage" o="https://allegrograph.com/"/>
+                <rdf p="doc:sw_has_homepage" o="https://allegrograph.com/products/gruff/"/>
+                <rdf p="doc:sw_has_homepage" o="https://franz.com/agraph/support/documentation/6.1.5/agwebview.html"/>
+				recommended
+				form-based editing, graph navigation, would be more useful if it understood rdf lists, but definitely has some merit
+				Graphical SPARQL builder
+            </rdf>
+
+
+			<mint_subject>
+            <rdf p="doc:sw_has_homepage">
+            https://zeppelin.apache.org/
+            </rdf>
+				recommended for exploration/visualizations?
+				http://zeppelin.apache.org/docs/0.9.0-SNAPSHOT/usage/dynamic_form/intro.html
+				https://hub.docker.com/r/cambridgesemantics/contrib-zeppelin/
+            </mint_subject>
+
+            <mint_subject><rdf p="sw:name">sw</rdf></mint_subject> was created by Vompany
+
+            <mint_subject company constructed:
+                sw1
+                sw2
+
+
+
+</uh1>

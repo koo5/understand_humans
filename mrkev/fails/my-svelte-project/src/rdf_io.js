@@ -1,5 +1,6 @@
 import _ from 'lodash';
-const N3 = require('n3');
+import * as N3 from 'n3';
+//const N3 = require('n3');
 const M = "http://rdf/mrkev#";
 const RDF = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
 const URI_HIERARCHICAL_NOTES = M+'hierarchical_notes';

@@ -5,65 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c20b3bb9-75c2-4f60-a778-cf5d0a1a979c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../first_attempt/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../first_attempt/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../first_attempt/.idea/frontend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../first_attempt/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../first_attempt/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../first_attempt/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../first_attempt/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../first_attempt/dataset1.n3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../first_attempt/dist/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../first_attempt/dist/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../first_attempt/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../first_attempt/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../first_attempt/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../first_attempt/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../first_attempt/src/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../first_attempt/todo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../first_attempt/webpack.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/my-svelte-project.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/scenario1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/scenario2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/work_in_progress/editors/browser_editors.notes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/work_in_progress/editors/rich_text_editor_example.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/work_in_progress/rdf/ontologies.n3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/work_in_progress/rdf/xxx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/work_in_progress/rdf/yyy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/work_in_progress/xml/rdf_visualization.uh1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/work_in_progress/xml/uh_xml_markup_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/en.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/global.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/icons/warning.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollup.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/setupTypeScript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Log.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Prefixes.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrefixesListItem.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quad.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quads.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuadsListItem.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RdfNodeEditor.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rdfq.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TextEditor.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/log_store.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quad_store.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quads.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rdf_io.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reinterpret.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rdf_io.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/rdf_io.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +71,7 @@
       <workItem from="1597819034819" duration="1236000" />
       <workItem from="1597845976652" duration="2303000" />
       <workItem from="1597876964745" duration="2779000" />
-      <workItem from="1597926554221" duration="10702000" />
+      <workItem from="1597926554221" duration="10700000" />
     </task>
     <servers />
   </component>
@@ -172,5 +117,16 @@
     <state x="302" y="41" width="674" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1597932106084" />
     <state x="604" y="82" width="1348" height="1356" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1597932973957" />
     <state x="302" y="41" width="674" height="678" key="search.everywhere.popup/1280.720.1280.720/0.0.1280.720/2560.1440.1280.720@0.0.1280.720" timestamp="1597818306007" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/quads.js</url>
+          <line>142</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

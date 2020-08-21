@@ -1,0 +1,4 @@
+```
+?- term_string(T, 's(X)'),call(T).
+ERROR: Unknown procedure: s/1
+```
