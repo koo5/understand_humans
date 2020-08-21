@@ -61,9 +61,26 @@
 		return text;
 	}
 
+	function editorElement(sibling_element)
+	{
+		return siblingElementByClass('editor', sibling_element);
+	}
+
+	function siblingElementByClass(cls, sibling_element)
+	{
+		while(sibling_element != null)
+		{
+			let maybe_editor = sibling_element.getElementsByClassName(cls)[0];
+			if (maybe_editor != null)
+				return maybe_editor;
+			sibling_element = sibling_element.parentElement;
+		}
+	}
+
+
 	function makeSpan(e)
 	{
-		const editor = e.target.parentElement.getElementsByClassName('editor')[0];
+		const editor = editorElement(e.target);
 		const span = wrap_selection(editor);
 		span.dataset.uri = generate_unique_uri('span');
 		add_quad(
@@ -100,6 +117,11 @@
 
 	}
 
+	function onChange(e)
+	{
+		const view = siblingElementByClass('html_view', e.target);
+		view.innerText = e.target.innerHTML;
+	}
 
 </script>
 
@@ -116,8 +138,10 @@
 	text document:
 
 	<pre>
-		<div class="editor" contenteditable="true" on:keydown={onEditorKeydown}>
+		<div class="editor" contenteditable="true" on:keydown={onEditorKeydown} on:change={onChange}>
 			blablabla<br/>
+		</div>
+		<div class="html_view">
 		</div>
 	</pre>
 	<button on:click={makeSpan}>selection to rdf</button>

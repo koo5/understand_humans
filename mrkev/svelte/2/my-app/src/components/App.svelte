@@ -8,12 +8,13 @@
 	import {onMount} from 'svelte';
 	import {fetch_dataset} from '../lib/rdf_io.js';
 	import {RDF, M, URI_PLAINTEXT} from  '../lib/quads.js';
-
+	import {ldo_test} from '../lib/ldo.ts';
 
 	let kb;
 
 	async function load()
 	{
+		ldo_test();
 		kb = await fetch_dataset();
 		console.log(kb);
 		console.log(kb.getQuads(null, null, null));
@@ -55,8 +56,8 @@
 		if (kb.getQuads(root, RDF + "type", URI_PLAINTEXT).length != 0)
 		{
 			var value = kb.getQuads(root, M + 'value', null)[0].object.value;
-			console.log("adding value:");
-			console.log(value);
+			/*console.log("adding value:");
+			console.log(value);*/
 			editor_element.innerText += value;
 		}
 		/*

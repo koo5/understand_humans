@@ -2,23 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6fa276c-bfd6-4802-9b30-d80fa80a01df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lib/ldo.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/qv.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../fails/my-svelte-project/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../fails/my-svelte-project/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../fails/my-svelte-project/docs/scenario1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../fails/my-svelte-project/docs/scenario2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../fails/my-svelte-project/docs/work_in_progress/editors/browser_editors.notes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../fails/my-svelte-project/docs/work_in_progress/editors/rich_text_editor_example.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../fails/my-svelte-project/docs/work_in_progress/rdf/ontologies.n3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../fails/my-svelte-project/docs/work_in_progress/rdf/xxx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../fails/my-svelte-project/docs/work_in_progress/rdf/yyy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../fails/my-svelte-project/docs/work_in_progress/xml/rdf_visualization.uh1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../fails/my-svelte-project/docs/work_in_progress/xml/uh_xml_markup_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1/my-svelte-project/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Rdfq.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Rdfq.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/reinterpret.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reinterpret.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TextEditor.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextEditor.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/ldo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ldo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/quads.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/quads.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/rdf_io.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/rdf_io.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597949238068</updated>
       <workItem from="1597949239323" duration="9959000" />
-      <workItem from="1597967331379" duration="12019000" />
+      <workItem from="1597967331379" duration="14130000" />
     </task>
     <servers />
   </component>
@@ -83,14 +74,14 @@
     </state>
     <state x="53" y="0" key="SettingsEditor/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1597968536697" />
     <state x="106" y="0" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1597967300974" />
-    <state x="160" y="0" width="623" height="720" key="find.popup" timestamp="1597971839912">
+    <state x="160" y="0" width="623" height="720" key="find.popup" timestamp="1598014512643">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="160" y="0" width="623" height="720" key="find.popup/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1597971839912" />
+    <state x="160" y="0" width="623" height="720" key="find.popup/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598014512643" />
     <state x="320" y="42" width="639" height="638" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1597959418349" />
-    <state x="303" y="40" width="672" height="679" key="search.everywhere.popup" timestamp="1598007749853">
+    <state x="303" y="40" width="672" height="679" key="search.everywhere.popup" timestamp="1598013938713">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="303" y="40" width="672" height="679" key="search.everywhere.popup/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598007749853" />
+    <state x="303" y="40" width="672" height="679" key="search.everywhere.popup/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598013938713" />
   </component>
 </project>

@@ -79,8 +79,8 @@ export class Quad
 
 	set s(x)
 	{
-		console.log('s setter this:');
-		console.log(this);
+		/*console.log('s setter this:');
+		console.log(this);*/
 		if (typeof (x) == "string")
 			x = normalize_rdf_node(parse_rdf_node(x));
 		this.spog[0] = x;
@@ -88,8 +88,8 @@ export class Quad
 
 	set p(x)
 	{
-		console.log('p setter this:');
-		console.log(this);
+		/*console.log('p setter this:');
+		console.log(this);*/
 		if (typeof (x) == "string")
 			x = normalize_rdf_node(parse_rdf_node(x));
 		this.spog[1] = x;
@@ -97,8 +97,8 @@ export class Quad
 
 	set o(x)
 	{
-		console.log('o setter this:');
-		console.log(this);
+		/*console.log('o setter this:');
+		console.log(this);*/
 		if (typeof (x) == "string")
 			x = normalize_rdf_node(parse_rdf_node(x));
 		this.spog[2] = x;
@@ -106,8 +106,8 @@ export class Quad
 
 	set g(x)
 	{
-		console.log('g setter this:');
-		console.log(this);
+		/*console.log('g setter this:');
+		console.log(this);*/
 		if (typeof (x) == "string")
 			x = normalize_rdf_node(parse_rdf_node(x));
 		this.spog[3] = x;
