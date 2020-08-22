@@ -1,9 +1,37 @@
 
 
-const notes_context = {
-	'@context':
+const contexts = {
+	'note':
+		{
 
+		},
+	'span':
+		{
 
+		},
+	'document':
+		{
+			'@context':
+				{
+					"m": "http://rdf/mrkev#",
+					"notes": "m:document_has_notes",
+				},
+			'@type': 'm:document'
+		}
+};
+
+		}
+}
+
+function new_note(body)
+{
+	return new Ldo(contexts.note, {body: new Ldo(contexts.span, {value:body})});
+}
+
+function new_document()
+{
+	return new Ldo(contexts.document, {notes:[]});
+}
 
 function reinterpret_as_hierarchical_notes(text:string)
 {

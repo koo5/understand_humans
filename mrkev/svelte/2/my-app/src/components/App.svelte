@@ -16,8 +16,8 @@
 	{
 		ldo_test();
 		kb = await fetch_dataset();
-		console.log(kb);
-		console.log(kb.getQuads(null, null, null));
+		/*console.log(kb);
+		console.log(kb.getQuads(null, null, null));*/
 	}
 
 	onMount(async () =>

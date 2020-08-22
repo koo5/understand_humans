@@ -18,14 +18,17 @@ const context = {
 export async function ldo_test()
 {
 	const compacted = await jsonld.compact(doc, context);
-	console.log(JSON.stringify(compacted, null, 2));
+	//console.log(JSON.stringify(compacted, null, 2));
+	//const nquads = await jsonld.toRDF(doc, {format: 'application/n-quads'});
+	const nquads = await jsonld.toRDF(doc, {});
+	console.log(nquads);
 }
 
 
 
 export class Ldo
 {
-	constructor(ctx)
+	constructor(ctx, data)
 	{
 		this._ctx = ctx;
 	}
@@ -33,5 +36,7 @@ export class Ldo
 	{
 		if (this in seen)
 			return;
+		const x = {...this, ...this._ctx};
+
 	}
 }

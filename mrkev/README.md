@@ -42,6 +42,8 @@ http://say-editor.com
 * mrkev aims to support hypergraphs, while say-editor is more of a lightweight RDFa markup tool
 * say-editor has a nice plugin system for automatic detection of machine-interpretable parts of text and providing specialized micro-editors, mrkev should try to re-use these plugins
 
+https://github.com/renerocksai/sublimeless_zk
+
 ## what to implement - first thoughts
 1) select some text in the editor area.
 

@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c6fa276c-bfd6-4802-9b30-d80fa80a01df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TextEditor.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextEditor.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/ldo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ldo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/quads.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/quads.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/rdf_io.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/rdf_io.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/reinterpret.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reinterpret.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +40,9 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JSON" />
+    <property name="settings.editor.splitter.proportion" value="0.24590164" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -56,7 +53,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597949238068</updated>
       <workItem from="1597949239323" duration="9959000" />
-      <workItem from="1597967331379" duration="14130000" />
+      <workItem from="1597967331379" duration="21593000" />
     </task>
     <servers />
   </component>
@@ -69,15 +66,15 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="53" y="0" key="SettingsEditor" timestamp="1597968536697">
+    <state x="0" y="0" width="1278" height="720" key="SettingsEditor" timestamp="1598041207133">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="53" y="0" key="SettingsEditor/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1597968536697" />
+    <state x="0" y="0" width="1278" height="720" key="SettingsEditor/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598041207133" />
     <state x="106" y="0" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1597967300974" />
-    <state x="160" y="0" width="623" height="720" key="find.popup" timestamp="1598014512643">
+    <state x="160" y="0" width="623" height="720" key="find.popup" timestamp="1598041544433">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="160" y="0" width="623" height="720" key="find.popup/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598014512643" />
+    <state x="160" y="0" width="623" height="720" key="find.popup/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598041544433" />
     <state x="320" y="42" width="639" height="638" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1597959418349" />
     <state x="303" y="40" width="672" height="679" key="search.everywhere.popup" timestamp="1598013938713">
       <screen x="0" y="0" width="1280" height="720" />
