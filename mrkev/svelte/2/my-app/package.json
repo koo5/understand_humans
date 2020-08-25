@@ -9,6 +9,7 @@
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
+    "test-all": "run-p --race dev cy:run && ava",
     "test": "run-p --race dev cy:run && ava",
     "ava": "ava"
   },

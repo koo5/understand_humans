@@ -1,4 +1,4 @@
-
+import {Ldo} from './ldo'
 
 const contexts = {
 	'note':
@@ -20,17 +20,15 @@ const contexts = {
 		}
 };
 
-		}
-}
 
-function new_note(body)
-{
-	return new Ldo(contexts.note, {body: new Ldo(contexts.span, {value:body})});
-}
-
-function new_document()
+export function new_document()
 {
 	return new Ldo(contexts.document, {notes:[]});
+}
+
+export function new_note(body)
+{
+	return new Ldo(contexts.note, {body: new Ldo(contexts.span, {value:body})});
 }
 
 function reinterpret_as_hierarchical_notes(text:string)
@@ -41,7 +39,7 @@ function reinterpret_as_hierarchical_notes(text:string)
 	const lines = text.split('\n');
 	lines.forEach((line) =>
 	{
-		let note = make_note(line.trim())
+		let note = new_note(line.trim())
 		let i = indents(line)
 		make_note_a_child_of_note_with_lower_indent_or_of_root(root, note, notes)
 	});
@@ -59,9 +57,6 @@ function make_note_a_child_of_note_with_lower_indent_or_of_root(root, note, note
 	root.notes.push(note)
 }
 
-
-
-}
 
 /*
 get number of tabs at beginning of string

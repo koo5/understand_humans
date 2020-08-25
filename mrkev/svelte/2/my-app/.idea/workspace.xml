@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c6fa276c-bfd6-4802-9b30-d80fa80a01df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes" beforeDir="false" afterPath="$PROJECT_DIR$/notes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/ldo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ldo.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/reinterpret.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reinterpret.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +40,39 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JSON" />
     <property name="settings.editor.splitter.proportion" value="0.24590164" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="npm.ava">
+    <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="test.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="ava" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="ava" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Node.js.test.js" />
+      <item itemvalue="npm.ava" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.test.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -54,6 +84,8 @@
       <updated>1597949238068</updated>
       <workItem from="1597949239323" duration="9959000" />
       <workItem from="1597967331379" duration="21593000" />
+      <workItem from="1598113011043" duration="11758000" />
+      <workItem from="1598388766044" duration="2365000" />
     </task>
     <servers />
   </component>
@@ -66,19 +98,110 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="98" y="4" width="1084" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598390416649">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="98" y="4" width="1084" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390416648" />
+    <state width="1280" height="241" key="GridCell.Tab.0.bottom" timestamp="1598390794918">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1280" height="241" key="GridCell.Tab.0.bottom/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390794918" />
+    <state width="1280" height="241" key="GridCell.Tab.0.center" timestamp="1598390794917">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1280" height="241" key="GridCell.Tab.0.center/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390794917" />
+    <state width="1280" height="241" key="GridCell.Tab.0.left" timestamp="1598390794917">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1280" height="241" key="GridCell.Tab.0.left/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390794917" />
+    <state width="1280" height="241" key="GridCell.Tab.0.right" timestamp="1598390794918">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1280" height="241" key="GridCell.Tab.0.right/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390794918" />
+    <state width="1280" height="241" key="GridCell.Tab.1.bottom" timestamp="1598390794918">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1280" height="241" key="GridCell.Tab.1.bottom/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390794918" />
+    <state width="1280" height="241" key="GridCell.Tab.1.center" timestamp="1598390794918">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1280" height="241" key="GridCell.Tab.1.center/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390794918" />
+    <state width="1280" height="241" key="GridCell.Tab.1.left" timestamp="1598390794918">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1280" height="241" key="GridCell.Tab.1.left/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390794918" />
+    <state width="1280" height="241" key="GridCell.Tab.1.right" timestamp="1598390794918">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1280" height="241" key="GridCell.Tab.1.right/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390794918" />
+    <state width="1280" height="241" key="GridCell.Tab.2.bottom" timestamp="1598390794919">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1280" height="241" key="GridCell.Tab.2.bottom/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390794919" />
+    <state width="1280" height="241" key="GridCell.Tab.2.center" timestamp="1598390794918">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1280" height="241" key="GridCell.Tab.2.center/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390794918" />
+    <state width="1280" height="241" key="GridCell.Tab.2.left" timestamp="1598390794918">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1280" height="241" key="GridCell.Tab.2.left/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390794918" />
+    <state width="1280" height="241" key="GridCell.Tab.2.right" timestamp="1598390794919">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1280" height="241" key="GridCell.Tab.2.right/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390794919" />
+    <state width="1280" height="241" key="GridCell.Tab.3.bottom" timestamp="1598390794919">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1280" height="241" key="GridCell.Tab.3.bottom/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390794919" />
+    <state width="1280" height="241" key="GridCell.Tab.3.center" timestamp="1598390794919">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1280" height="241" key="GridCell.Tab.3.center/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390794919" />
+    <state width="1280" height="241" key="GridCell.Tab.3.left" timestamp="1598390794919">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1280" height="241" key="GridCell.Tab.3.left/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390794919" />
+    <state width="1280" height="241" key="GridCell.Tab.3.right" timestamp="1598390794919">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1280" height="241" key="GridCell.Tab.3.right/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390794919" />
     <state x="0" y="0" width="1278" height="720" key="SettingsEditor" timestamp="1598041207133">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="0" y="0" width="1278" height="720" key="SettingsEditor/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598041207133" />
     <state x="106" y="0" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1597967300974" />
+    <state x="151" y="11" width="971" height="689" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1598389925788">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="151" y="11" width="971" height="689" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598389925788" />
     <state x="160" y="0" width="623" height="720" key="find.popup" timestamp="1598041544433">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="160" y="0" width="623" height="720" key="find.popup/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598041544433" />
     <state x="320" y="42" width="639" height="638" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1597959418349" />
+    <state x="360" y="173" width="554" height="367" key="jetbrains.nodejs.interpreters-dialog" timestamp="1598390303056">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="360" y="173" width="554" height="367" key="jetbrains.nodejs.interpreters-dialog/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390303056" />
     <state x="303" y="40" width="672" height="679" key="search.everywhere.popup" timestamp="1598013938713">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="303" y="40" width="672" height="679" key="search.everywhere.popup/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598013938713" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/lib/ldo.ts</url>
+          <line>55</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="javascript-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

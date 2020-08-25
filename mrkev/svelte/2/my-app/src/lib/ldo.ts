@@ -28,15 +28,31 @@ export async function ldo_test()
 
 export class Ldo
 {
+	_ctx;
 	constructor(ctx, data)
 	{
+		Object.assign(this, data)
 		this._ctx = ctx;
 	}
-	save(seen)
+	async save(seen)
 	{
-		if (this in seen)
-			return;
-		const x = {...this, ...this._ctx};
+		//console.log('this:')
+		//console.log(this)
 
+		if (seen.includes(this))
+			return;
+		let ctx = this._ctx;
+
+		//console.log('ctx:')
+		//console.log(ctx)
+
+		const x = {...this, ...ctx};
+		delete x._ctx
+
+		//console.log('x:')
+		//console.log(x)
+
+
+		return await jsonld.toRDF(x, {});
 	}
 }
