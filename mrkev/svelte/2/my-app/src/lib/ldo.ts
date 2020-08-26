@@ -15,44 +15,95 @@ const context = {
 
 
 
+const hh = {
+  "@context": {"dcterms": "http://purl.org/dc/terms/"},
+  "@id": "http://example.org/articles/8",
+  "dcterms:title": [
+    {
+      "@value": "Das Kapital",
+      "@language": "de"
+    },
+    {
+      "@value": "Capital",
+      "@language": "en"
+    }
+  ]
+}
+
 export async function ldo_test()
 {
-	const compacted = await jsonld.compact(doc, context);
+	//const compacted = await jsonld.compact(doc, context);
 	//console.log(JSON.stringify(compacted, null, 2));
 	//const nquads = await jsonld.toRDF(doc, {format: 'application/n-quads'});
-	const nquads = await jsonld.toRDF(doc, {});
+	const nquads = await jsonld.toRDF(hh, {});
+	console.log('ldo_test nquads:');
 	console.log(nquads);
 }
 
-
-
 export class Ldo
 {
-	_ctx;
-	constructor(ctx, data)
+	_template;
+	_id_template;
+	constructor(template, data)
 	{
 		Object.assign(this, data)
-		this._ctx = ctx;
+		this._template = template;
 	}
-	async save(seen)
+	async save()
 	{
-		//console.log('this:')
-		//console.log(this)
-
-		if (seen.includes(this))
-			return;
-		let ctx = this._ctx;
-
-		//console.log('ctx:')
-		//console.log(ctx)
-
-		const x = {...this, ...ctx};
-		delete x._ctx
-
-		//console.log('x:')
-		//console.log(x)
-
-
-		return await jsonld.toRDF(x, {});
+		const result = save_ldo(this, [])
+		let quads = await jsonld.toRDF(result, {});
+		console.log('saved quads:')
+		console.log(quads)
+		return quads
 	}
+}
+
+let last_unique_uri_number = -1;
+
+function generate_unique_uri(suffix = "uri")
+{
+	return "http://rdf.lodgeit.net.au/iri_" + (++last_unique_uri_number).toString() + "_" + suffix;
+}
+
+function save_ldo(x, seen)
+{
+	let result:any = '?';
+	//console.log('x:')
+	//console.log(x)
+
+	if (x instanceof Ldo)
+	{
+		if (seen.includes(x))
+			return x._id_template;
+
+		seen.push(x);
+		x._id_template = {'@id':generate_unique_uri('ldo')}
+
+		result = {...x._template, ...x._id_template}
+
+		for (const property of Object.getOwnPropertyNames(x))
+		{
+			if (['_template', '_id_template'].includes(property)) continue;
+			console.log('property:')
+			console.log(`${property}: ${x[property]}`);
+			result[property] = save_ldo(x[property], seen)
+		}
+	}
+	else if (Array.isArray(x))
+	{
+		if (seen.includes(x))
+			console.log('warning:seen this array before')
+		seen.push(x);
+
+		const items = []
+		for (const item of x)
+			items.push(save_ldo(item, seen))
+		result = {'@list':items}
+	}
+	else
+		result = x;
+	console.log('result:')
+	console.log(result)
+	return result;
 }

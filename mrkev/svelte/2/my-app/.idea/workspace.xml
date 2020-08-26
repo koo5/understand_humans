@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c6fa276c-bfd6-4802-9b30-d80fa80a01df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes" beforeDir="false" afterPath="$PROJECT_DIR$/notes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/ldo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ldo.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/reinterpret.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reinterpret.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
@@ -45,7 +43,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JSON" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.24590164" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -85,7 +83,8 @@
       <workItem from="1597949239323" duration="9959000" />
       <workItem from="1597967331379" duration="21593000" />
       <workItem from="1598113011043" duration="11758000" />
-      <workItem from="1598388766044" duration="2365000" />
+      <workItem from="1598388766044" duration="6540000" />
+      <workItem from="1598430867139" duration="1854000" />
     </task>
     <servers />
   </component>
@@ -166,36 +165,35 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state width="1280" height="241" key="GridCell.Tab.3.right/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390794919" />
-    <state x="0" y="0" width="1278" height="720" key="SettingsEditor" timestamp="1598041207133">
+    <state x="0" y="0" width="1278" height="720" key="SettingsEditor" timestamp="1598431127114">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="0" y="0" width="1278" height="720" key="SettingsEditor/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598041207133" />
+    <state x="0" y="0" width="1278" height="720" key="SettingsEditor/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598431127114" />
     <state x="106" y="0" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1597967300974" />
     <state x="151" y="11" width="971" height="689" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1598389925788">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="151" y="11" width="971" height="689" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598389925788" />
-    <state x="160" y="0" width="623" height="720" key="find.popup" timestamp="1598041544433">
+    <state x="160" y="0" width="644" height="720" key="find.popup" timestamp="1598431173396">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="160" y="0" width="623" height="720" key="find.popup/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598041544433" />
+    <state x="160" y="0" width="644" height="720" key="find.popup/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598431173396" />
     <state x="320" y="42" width="639" height="638" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1597959418349" />
     <state x="360" y="173" width="554" height="367" key="jetbrains.nodejs.interpreters-dialog" timestamp="1598390303056">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="360" y="173" width="554" height="367" key="jetbrains.nodejs.interpreters-dialog/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390303056" />
-    <state x="303" y="40" width="672" height="679" key="search.everywhere.popup" timestamp="1598013938713">
+    <state x="303" y="40" width="674" height="679" key="search.everywhere.popup" timestamp="1598430830797">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="303" y="40" width="672" height="679" key="search.everywhere.popup/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598013938713" />
+    <state x="303" y="40" width="674" height="679" key="search.everywhere.popup/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598430830797" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/lib/ldo.ts</url>
-          <line>55</line>
-          <properties lambdaOrdinal="-1" />
+          <line>54</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

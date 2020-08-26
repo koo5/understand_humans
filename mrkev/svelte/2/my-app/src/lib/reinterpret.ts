@@ -15,6 +15,7 @@ const contexts = {
 				{
 					"m": "http://rdf/mrkev#",
 					"notes": "m:document_has_notes",
+					"author": "m:document_has_author",
 				},
 			'@type': 'm:document'
 		}
@@ -23,7 +24,7 @@ const contexts = {
 
 export function new_document()
 {
-	return new Ldo(contexts.document, {notes:[]});
+	return new Ldo(contexts.document, {notes:[], author:"aaa"});
 }
 
 export function new_note(body)
