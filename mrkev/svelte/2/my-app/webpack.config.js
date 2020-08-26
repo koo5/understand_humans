@@ -30,7 +30,6 @@ module.exports = {
 								const { code, frame } = warning;
 								if (code === "css-unused-selector")
 									return;
-
 								handler(warning);
 							}
 						}

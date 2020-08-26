@@ -54,7 +54,7 @@ export class Ldo
 		const result = save_ldo(this, [])
 		let quads = await jsonld.toRDF(result, {});
 		console.log('saved quads:')
-		console.log(quads)
+		console.log(quads[1].object.datatype.value)
 		return quads
 	}
 }
