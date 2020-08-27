@@ -23,3 +23,12 @@ npm init ava
 ----
 https://forum.solidproject.org/t/best-js-libraries-to-help-build-visualisation-components-of-rdf-using-sveltejs/2548
 ----
+
+svench:
+	https://www.youtube.com/watch?v=kn04kACkbqw
+	https://github.com/sveltejs/component-template/issues/23
+	https://developer.aliyun.com/mirror/npm/package/@budibase/bbui
+	
+	
+
+https://github.com/theWebalyst/svelte-with-rdf-libs-webpack
