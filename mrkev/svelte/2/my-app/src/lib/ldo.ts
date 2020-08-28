@@ -1,9 +1,16 @@
 import * as jsonld from 'jsonld';
 
-export class Ldo
+interface Ldo_interface {
+	_template:object;
+	_id_template:object;
+    [key: string]: any
+}
+
+export class Ldo implements Ldo_interface
 {
 	_template:object;
 	_id_template:object;
+    [key: string]: any;
 	constructor(template:object, data:object)
 	{
 		Object.assign(this, data)
@@ -26,7 +33,7 @@ function generate_unique_uri(suffix = "uri")
 	return "http://rdf.lodgeit.net.au/iri_" + (++last_unique_uri_number).toString() + "_" + suffix;
 }
 
-function save_ldo(something:any, seen:any[])
+function save_ldo(something:any, seen:any[]):any
 {
 	let result:any = '?';
 	//console.log('x:')
@@ -34,7 +41,7 @@ function save_ldo(something:any, seen:any[])
 
 	if (something instanceof Ldo)
 	{
-		let x:object = something;
+		let x:any = something;
 		if (seen.includes(x))
 			return x._id_template;
 
@@ -64,7 +71,7 @@ function save_ldo(something:any, seen:any[])
 		result = {'@list':items}
 	}
 	else
-		result = x;
+		result = something;
 	console.log('result:')
 	console.log(result)
 	return result;

@@ -1,7 +1,7 @@
 <script>
 
 	import PrefixesListItem from './PrefixesListItem.svelte';
-	import {prefix_store} from '../lib/quad_store.js';
+	import {prefix_store} from '../lib/prefix_store.js';
 
 </script>
 

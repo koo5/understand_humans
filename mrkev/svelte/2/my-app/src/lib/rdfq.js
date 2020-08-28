@@ -20,11 +20,9 @@
 			this.store = store;
 		}
 
-		function
-
 		* q(s, p, o, g)
 		{
-			while store.q(s, p, o, g)
+			while (store.q(s, p, o, g))
 				yield true;
 		}
 	}

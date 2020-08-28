@@ -43,31 +43,30 @@ export function new_document()
 	return new Ldo(templates.document,{notes:[], author:"aaa"});
 }
 
-export function new_note(body)
+export function new_note(body:Ldo)
 {
 	return new Ldo(templates.note, {body: body})
 }
 
-export function new_span(text) =>
-	Ldo(templates.span, {value:text})});
+export const new_span = (text:string) => new Ldo(templates.span, {value:text})
 
 
 function reinterpret_as_hierarchical_notes(text:string)
 {
 	const root = new_document();
-	const notes = [];
+	const notes:Ldo[] = [];
 	let current_indent = 0;
 	const lines = text.split('\n');
 	lines.forEach((line) =>
 	{
-		let note = new_note(line.trim())
+		let note = new_note(new_span(line.trim()))
 		let i = indents(line)
 		make_note_a_child_of_note_with_lower_indent_or_of_root(root, note, notes)
 	});
 	return root;
 }
 
-function make_note_a_child_of_note_with_lower_indent_or_of_root(root, note, notes) {
+function make_note_a_child_of_note_with_lower_indent_or_of_root(root:Ldo, note:Ldo, notes:Array<Ldo>) {
 	for (let i = notes.length - 1; i >= 0; i--) {
 		let x = notes[i];
 		if (x.indent < note.ident) {
