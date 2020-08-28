@@ -1,28 +1,25 @@
 import {writable} from 'svelte/store';
-import {Quad, Suri} from './quads';
+import * as n from 'n3';
 
-export const prefix_store = writable([
-	{
-		'prefix': 'rdf',
-		'uri': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'
-	},
-	{
-		'prefix': 'rdfs',
-		'uri': 'http://www.w3.org/2000/01/rdf-schema#'
-	},
-	{
-		'prefix': 'mrkev',
-		'uri': 'https://rdf.lodgeit.net.au/mrkev'
-	}
-]);
 
-export const quad_store = writable(
-	[
+export const quad_store = writable([]);
+
+export function add_quad(x)
+{
+	console.log('add_quad:');
+	console.log(x);
+	quad_store.update(old_state => [x].concat(old_state));
+}
+
+
+
+		/*
 		new Quad(
 			new Suri('', 'dataset1'),
 			new Suri('rdfq', 'contains'),
 			new Suri('', 'q0'),
 			new Suri('', 'default'))
+		 */
 		/*		new Quad(
 					new Suri('','q0'),
 					new Suri('rdfq','contains'),
@@ -36,12 +33,3 @@ export const quad_store = writable(
 		*/
 		//a www:reference
 		//rdf:value '<https://lodgeit.net.au'>
-	]
-);
-
-export function add_quad(x)
-{
-	console.log('add_quad:');
-	console.log(x);
-	quad_store.update(old_state => [x].concat(old_state));
-}

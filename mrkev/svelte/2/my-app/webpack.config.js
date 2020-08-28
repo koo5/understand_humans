@@ -8,7 +8,7 @@ const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 
 const alias = { svelte: path.resolve('node_modules', 'svelte') };
-const extensions = ['.mjs', '.js', '.json', '.svelte', '.html'];
+const extensions = ['.mjs', '.js', '.json', '.svelte', '.html', '.ts'];
 const mainFields = ['svelte', 'module', 'browser', 'main'];
 
 module.exports = {
@@ -18,6 +18,11 @@ module.exports = {
 		resolve: { alias, extensions, mainFields },
 		module: {
 			rules: [
+				{
+					test: /\.tsx?$/,
+					use: 'ts-loader',
+					exclude: /node_modules/,
+				},
 				{
 					test: /\.(svelte|html)$/,
 					use: {
@@ -57,6 +62,11 @@ module.exports = {
 		externals: Object.keys(pkg.dependencies).concat('encoding'),
 		module: {
 			rules: [
+				{
+					test: /\.tsx?$/,
+					use: 'ts-loader',
+					exclude: /node_modules/,
+				},
 				{
 					test: /\.(svelte|html)$/,
 					use: {

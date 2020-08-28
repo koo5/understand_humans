@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6fa276c-bfd6-4802-9b30-d80fa80a01df" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/lib/jsonld_experiments.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/prefix_store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/rdfq.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes" beforeDir="false" afterPath="$PROJECT_DIR$/notes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/ldo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ldo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/quad_store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/quad_store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/qv.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/qv.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/reinterpret.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reinterpret.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -85,7 +96,11 @@
       <workItem from="1598430867139" duration="4550000" />
       <workItem from="1598444426927" duration="112000" />
       <workItem from="1598444800708" duration="127000" />
-      <workItem from="1598444945788" duration="1819000" />
+      <workItem from="1598444945788" duration="2411000" />
+      <workItem from="1598567250367" duration="97000" />
+      <workItem from="1598567372438" duration="4000" />
+      <workItem from="1598568047763" duration="230000" />
+      <workItem from="1598611626693" duration="10409000" />
     </task>
     <servers />
   </component>
@@ -102,6 +117,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="98" y="4" width="1084" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390416648" />
+    <state x="1920" y="1080" width="773" height="408" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598624361711">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="1920" y="1080" width="773" height="408" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/1920.1080.1920.1080@1920.1080.1920.1080" timestamp="1598624361711" />
     <state width="1280" height="241" key="GridCell.Tab.0.bottom" timestamp="1598390794918">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -175,10 +194,11 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="151" y="11" width="971" height="689" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598389925788" />
-    <state x="160" y="0" width="644" height="720" key="find.popup" timestamp="1598431173396">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state x="2160" y="1080" width="966" height="1080" key="find.popup" timestamp="1598612351250">
+      <screen x="1920" y="1080" width="1920" height="1080" />
     </state>
     <state x="160" y="0" width="644" height="720" key="find.popup/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598431173396" />
+    <state x="2160" y="1080" width="966" height="1080" key="find.popup/0.0.1920.1080/1920.1080.1920.1080@1920.1080.1920.1080" timestamp="1598612351250" />
     <state x="320" y="42" width="639" height="638" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1597959418349" />
     <state x="360" y="173" width="554" height="367" key="jetbrains.nodejs.interpreters-dialog" timestamp="1598390303056">
       <screen x="0" y="0" width="1280" height="720" />
@@ -191,13 +211,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/lib/ldo.ts</url>
-          <line>54</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint enabled="true" type="javascript-exception" />
       </default-breakpoints>
