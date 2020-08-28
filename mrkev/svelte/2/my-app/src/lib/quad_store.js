@@ -11,6 +11,13 @@ export function add_quad(x)
 	quad_store.update(old_state => [x].concat(old_state));
 }
 
+export function add_quads(x)
+{
+	console.log('add_quads:');
+	console.log(x);
+	quad_store.update(old_state => quads.concat(old_state));
+}
+
 
 
 		/*

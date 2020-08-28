@@ -51,7 +51,7 @@ export function new_note(body:Ldo)
 export const new_span = (text:string) => new Ldo(templates.span, {value:text})
 
 
-function reinterpret_as_hierarchical_notes(text:string)
+export function reinterpret_as_hierarchical_notes(text:string)
 {
 	const root = new_document();
 	const notes:Ldo[] = [];

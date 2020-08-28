@@ -8,13 +8,13 @@
 	import {onMount} from 'svelte';
 	import {fetch_dataset} from '../lib/rdf_io.js';
 	import {RDF, M, URI_PLAINTEXT} from  '../lib/quads.js';
-	import {ldo_test} from '../lib/ldo.ts';
+	//import ldo_test from '../lib/.ts';
 
 	let kb;
 
 	async function load()
 	{
-		ldo_test();
+		//ldo_test();
 		kb = await fetch_dataset();
 		/*console.log(kb);
 		console.log(kb.getQuads(null, null, null));*/
@@ -78,6 +78,7 @@
 </script>
 
 <main>
+	<hr>
 	hierarchical notes view:
 	<ul>
 		<li>xxx</li>

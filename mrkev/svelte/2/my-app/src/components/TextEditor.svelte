@@ -2,7 +2,8 @@
 
 	import {Suri, Quad, Literal} from '../lib/quads.js';
 	import {log} from '../lib/log_store.js';
-	import {add_quad} from '../lib/quad_store.js';
+	import {add_quad, add_quads} from '../lib/quad_store.js';
+	import {reinterpret_as_hierarchical_notes} from '../lib/reinterpret.ts';
 	import {saveAs} from 'file-saver';
 
 	function addCode(cls)
@@ -123,6 +124,14 @@
 		view.innerText = e.target.innerHTML;
 	}
 
+	async function on_reinterpret_as_hierarchical_notes(e)
+	{
+		const editor = editorElement(e.target);
+		const ldo = reinterpret_as_hierarchical_notes(editor.innerText);
+		const quads = await ldo.save()
+		add_quads(quads)
+	}
+
 </script>
 
 <div class="mrkev_div">
@@ -144,6 +153,7 @@
 		<div class="html_view">
 		</div>
 	</pre>
+	<button on:click={on_reinterpret_as_hierarchical_notes}>reinterpret_as_hierarchical_notes</button>
 	<button on:click={makeSpan}>selection to rdf</button>
 	<button on:click={saveText}>saveText</button>
 	<button on:click={saveAll}>saveAll</button>

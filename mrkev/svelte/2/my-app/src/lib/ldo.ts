@@ -21,7 +21,7 @@ export class Ldo implements Ldo_interface
 		const result = save_ldo(this, [])
 		let quads:any = await jsonld.toRDF(result, {});
 		console.log('saved quads:')
-		console.log(quads[1].object.datatype.value)
+		console.log(quads/*[1].object.datatype.value*/)
 		return quads
 	}
 }
