@@ -1,17 +1,18 @@
 <script>
 
 	import SvelteTooltip from 'svelte-tooltip';
+	import {rdf_node_textual_representation} from '../lib/quads.js';
 
 
 
-	// https://github.com/sveltejs/sapper/issues/774
+	// popover hack https://github.com/sveltejs/sapper/issues/774
 	//import Popover from 'svelte-popover';
 	import {onMount} from 'svelte';
 	let Popover;
 	onMount(async () => {
         Popover = (await import('svelte-popover')).default;
     });
-
+	// /popover hack
 
 
 	import {rdf_node_parsing_result} from '../lib/quads.js';
@@ -19,7 +20,7 @@
 	export let node;
 	let errors = null;
 
-	function change(e)
+	function on_change(e)
 	{
 		const r = rdf_node_parsing_result(e.target.value);
 		if ('errors' in r)
@@ -34,7 +35,7 @@
 
 </script>
 
-<input class="edit" value={node} on:input={change}/>
+<input class="edit" value={rdf_node_textual_representation(node)} on:input={on_change}/>
 {#if (errors != null)}
 	<svelte:component this={Popover} overlayColor=#ffffff90>
 				<span slot=target>

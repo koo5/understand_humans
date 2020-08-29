@@ -3,6 +3,7 @@ a span is a part of a list, which is a 'note_has_items' of a note. The note is a
  */
 
 import {Ldo} from './ldo'
+import {add_quads} from "./quad_store";
 
 const templates = {
 	'document':
@@ -96,3 +97,4 @@ export function indents(line:string): number
 	}
 	return result;
 }
+

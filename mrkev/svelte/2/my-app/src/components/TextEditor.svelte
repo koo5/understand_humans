@@ -1,9 +1,9 @@
 <script>
 
-	import {Suri, Quad, Literal} from '../lib/quads.js';
+	import {generate_unique_uri, df} from '../lib/quads.js';
 	import {log} from '../lib/log_store.js';
 	import {add_quad, add_quads} from '../lib/quad_store.js';
-	import {reinterpret_as_hierarchical_notes} from '../lib/reinterpret.ts';
+	import {reinterpret_element_contents_as_hierarchical_notes,editorElement,siblingElementByClass} from '../lib/actions.js';
 	import {saveAs} from 'file-saver';
 
 	function addCode(cls)
@@ -52,31 +52,11 @@
 	var last_unique_uri_number = -1;
 
 
-	function generate_unique_uri(suffix = "uri")
-	{
-		return new Suri('', "uri_" + (++last_unique_uri_number).toString() + "_" + suffix);
-	}
-
 	function uri(text)
 	{
 		return text;
 	}
 
-	function editorElement(sibling_element)
-	{
-		return siblingElementByClass('editor', sibling_element);
-	}
-
-	function siblingElementByClass(cls, sibling_element)
-	{
-		while(sibling_element != null)
-		{
-			let maybe_editor = sibling_element.getElementsByClassName(cls)[0];
-			if (maybe_editor != null)
-				return maybe_editor;
-			sibling_element = sibling_element.parentElement;
-		}
-	}
 
 
 	function makeSpan(e)
@@ -85,11 +65,10 @@
 		const span = wrap_selection(editor);
 		span.dataset.uri = generate_unique_uri('span');
 		add_quad(
-			new Quad(
+			df.quad(
 				span.dataset.uri,
-				new Suri('mrkev', 'value'),
-				new Literal(text_of_span(span)),
-				new Suri('', 'default')
+				new suri('mrkev', 'value'),
+				df.literal(text_of_span(span))
 			)
 		);
 	}
@@ -126,10 +105,7 @@
 
 	async function on_reinterpret_as_hierarchical_notes(e)
 	{
-		const editor = editorElement(e.target);
-		const ldo = reinterpret_as_hierarchical_notes(editor.innerText);
-		const quads = await ldo.save()
-		add_quads(quads)
+		await reinterpret_element_contents_as_hierarchical_notes(e.target)
 	}
 
 </script>

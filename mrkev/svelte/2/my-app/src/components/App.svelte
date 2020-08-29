@@ -8,16 +8,40 @@
 	import {onMount} from 'svelte';
 	import {fetch_dataset} from '../lib/rdf_io.js';
 	import {RDF, M, URI_PLAINTEXT} from  '../lib/quads.js';
+	import {reinterpret_element_contents_as_hierarchical_notes} from '../lib/actions.js';
+
 	//import ldo_test from '../lib/.ts';
+
+	import * as N3 from 'n3';
+	const df = N3.DataFactory;
 
 	let kb;
 
 	async function load()
 	{
+
+		/*
+		console.log('llllllllllllllllllll')
+
+		let a =  df.namedNode('banana')
+		let b =  df.namedNode(':banana')
+		let q = df.quad(a,b,a)
+
+		const store = new N3.Store();
+		store.addQuad(q)
+		const writer = new N3.Writer({ prefixes: { c: 'http://example.org/cartoons#' } });
+		writer.addQuad(q);
+		writer.end((error, result) => console.log((error, result)));
+		*/
+
+
 		//ldo_test();
 		kb = await fetch_dataset();
 		/*console.log(kb);
 		console.log(kb.getQuads(null, null, null));*/
+
+		forAllEditorsAsync((div) => {reinterpret_element_contents_as_hierarchical_notes(div)});
+
 	}
 
 	onMount(async () =>
@@ -33,8 +57,19 @@
 
 	function event__kb_updated_for_page()
 	{
+		forAllEditors((div) => {event__kb_updated_for_frame(div)});
+	}
+
+	function forAllEditors(fn)
+	{
 		for (let div of document.getElementsByClassName("mrkev_div"))
-			event__kb_updated_for_frame(div);
+			fn(div);
+	}
+
+	async function forAllEditorsAsync(fn)
+	{
+		for (let div of document.getElementsByClassName("mrkev_div"))
+			await fn(div);
 	}
 
 	function event__kb_updated_for_frame(div)
