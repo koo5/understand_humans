@@ -1,5 +1,5 @@
 import {get} from 'svelte/store';
-import {prefix_store} from '../lib/prefix_store.js';
+import {try_to_shorten_uri, expand_prefix} from './prefixes.ts';
 
 import * as n from 'n3';
 export const df = n.DataFactory;
@@ -10,11 +10,24 @@ export const URI_HIERARCHICAL_NOTES = M + 'hierarchical_notes';
 export const URI_PLAINTEXT = M + 'plain_text';
 
 
+
+
 export function suri(prefix, suffix)
 {
+	const result = maybe_namednode_from_prefix_and_suffix(prefix, suffix)
+	if (result.errors)
+		throw result.errors;
+	return result.value;
+
+}
+
+function maybe_namednode_from_prefix_and_suffix(prefix, suffix)
+{
 	const expanded_prefix = expand_prefix(prefix)
+	if (expanded_prefix === undefined)
+		return {errors: ['failed to expand prefix "' + prefix + '"']};
 	const iri = expanded_prefix + postfix
-	df.namedNode(iri)
+	return {value: df.namedNode(iri)}
 }
 
 export function parse_rdf_node(x)
@@ -36,8 +49,8 @@ export function rdf_node_parsing_result(x, options)
 	const parser_funcs =
 		[
 			parse_rdf_suri, parse_rdf_furi,parse_rdf_furi_bare,
-			parse_rdf_singlequote_literal, parse_rdf_doublequote_literal
-
+			parse_rdf_singlequote_literal, parse_rdf_doublequote_literal,
+			parse_rdf_default_graph
 		];
 	/*todo
 	if (options['allow_variable'] != false)
@@ -62,14 +75,22 @@ export function rdf_node_parsing_result(x, options)
 export function rdf_node_textual_representation(x)
 {
 	if (x.termType == 'NamedNode')
-		return '<' + x.value + '>';
+		return try_to_shorten_uri(x.value) || ('<' + x.value + '>');
 	if (x.termType == 'Literal')
 		return '"' + x.value + '"';
-	if (x.termType == 'defalutGraph')
+	if (x.termType == 'defaultGraph')
 		return 'default graph!'
-	return "xx"
+	if (x.termType == 'blankNode')
+		return 'id' in x ? x.id : '_:' + x.value
+	return "some " + x.termType
 }
 
+function parse_rdf_default_graph(x)
+{
+	if (x == 'default graph!')
+		return {value: new df.defaultGraph()};
+	return {errors: ['is not: "default graph!"']}
+}
 
 /*
 N3 grammars:
@@ -101,16 +122,7 @@ function parse_rdf_suri(x)
 		return {errors: ['does not match qname regex pattern: ' + re]}
 	if (m[1] === undefined)
 		m[1] = '';
-	return {value: suri(m[1], m[2])}
-}
-
-function expand_prefix(prefix)
-{
-	const matches = get(prefix_store).filter(x => x.prefix == prefix)
-	if (matches.length == 1)
-		return matches[0].uri
-	if (matches.length > 1)
-		throw 'multiple prefixes match'
+	return maybe_namednode_from_prefix_and_suffix(m[1], m[2])
 }
 
 function parse_rdf_singlequote_literal(x)
