@@ -1,19 +1,19 @@
 <script>
 	import QuadsListItem from './QuadsListItem.svelte';
-	import {add_quad, quad_store} from '../lib/quad_store.js';
-
+	import {quad_store, quad_store_save} from "../lib/quad_store";
 
 </script>
 
 <div>
 	{#if $quad_store.length != 0}
-		store contains {$quad_store.length} quads:
+		store contains {$quad_store.length} quads.
 	{:else}
 		store is empty.
 	{/if}
 
-	<ul>
+	<button on:click={quad_store_save}>save as TriG</button>
 
+	<ul>
 		{#each $quad_store as item}
 			<QuadsListItem quad={item}/>
 		{/each}
@@ -21,5 +21,11 @@
 </div>
 
 <style>
+
+	ul {
+	margin: 0px;
+	padding: 0px;
+
+}
 
 </style>

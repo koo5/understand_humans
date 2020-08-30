@@ -1,4 +1,4 @@
-@prefix mrkev: <http://rdf/mrkev#>.
+@prefix mrkev: <https://rdf.lodgeit.net.au/mrkev#>.
 @prefix : <http://rdf/kb>.
 
 <http://rdf/dataset1> a mrkev:dataset;

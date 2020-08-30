@@ -42,15 +42,15 @@
 
 <li>
 
-
 	<button class="destroy" title="delete" on:click={handleRemove}>x</button>
+	<br>
 	<RdfNodeEditor bind:node={quad.subject}></RdfNodeEditor>
 	<RdfNodeEditor bind:node={quad.predicate}></RdfNodeEditor>
 	<RdfNodeEditor bind:node={quad.object}></RdfNodeEditor>
 	<RdfNodeEditor bind:node={quad.graph}></RdfNodeEditor>
+	<br>
 	<button title="logQuad" on:click={logQuad}>logQuad</button>
 	<button title="changeQuad" on:click={changeQuad}>changeQuad</button>
-
 	<span>
         <button on:click={talkAboutThisTriple}>talk about this triple</button>
         <svelte:component this={Popover} overlayColor=#ffffff90>
@@ -84,11 +84,14 @@
 
 
 </li>
-
 <style>
 
-	input, select {
-		width: 40%;
-	}
+
+
+
+li {
+	padding: 1px;
+	margin: 1px;
+}
 
 </style>

@@ -3,14 +3,13 @@ a span is a part of a list, which is a 'note_has_items' of a note. The note is a
  */
 
 import {Ldo} from './ldo'
-import {add_quads} from "./quad_store";
 
 const templates = {
 	'document':
 		{
 			'@context':
 				{
-					"m": "http://rdf/mrkev#",
+					"m": "https://rdf.lodgeit.net.au/mrkev#",
 					"notes": "m:document_has_notes",
 					"author": "m:document_has_author",
 				},
@@ -20,7 +19,7 @@ const templates = {
 		{
 			'@context':
 				{
-					"m": "http://rdf/mrkev#",
+					"m": "https://rdf.lodgeit.net.au/mrkev#",
 					"notes": "m:note_has_items",
 					"author": "m:note_has_author",
 				},
@@ -31,7 +30,7 @@ const templates = {
 		{
 			'@context':
 				{
-					"m": "http://rdf/mrkev#",
+					"m": "https://rdf.lodgeit.net.au/mrkev#",
 					"value": "m:span_has_value",
 					"author": "m:span_has_author",
 				},

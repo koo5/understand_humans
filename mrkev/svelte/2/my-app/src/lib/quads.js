@@ -4,7 +4,7 @@ import {try_to_shorten_uri, expand_prefix} from './prefixes.ts';
 import * as n from 'n3';
 export const df = n.DataFactory;
 
-export const M = "http://rdf/mrkev#";
+export const M = "https://rdf.lodgeit.net.au/mrkev#";
 export const RDF = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
 export const URI_HIERARCHICAL_NOTES = M + 'hierarchical_notes';
 export const URI_PLAINTEXT = M + 'plain_text';
@@ -78,10 +78,10 @@ export function rdf_node_textual_representation(x)
 		return try_to_shorten_uri(x.value) || ('<' + x.value + '>');
 	if (x.termType == 'Literal')
 		return '"' + x.value + '"';
-	if (x.termType == 'defaultGraph')
+	if (x.termType == 'DefaultGraph')
 		return 'default graph!'
-	if (x.termType == 'blankNode')
-		return 'id' in x ? x.id : '_:' + x.value
+	if (x.termType == 'BlankNode')
+		return x.value
 	return "some " + x.termType
 }
 

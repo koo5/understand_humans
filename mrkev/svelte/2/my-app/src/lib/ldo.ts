@@ -1,4 +1,17 @@
 import * as jsonld from 'jsonld';
+import {Term} from 'n3';
+
+function fix_digitalbazaar_quad(quad:any)
+{
+	quad.equals = Term.prototype.equals;
+	for (const x of [quad.subject, quad.predicate, quad.object, quad.graph])
+	{
+		x.equals = Term.prototype.equals
+		if (x.termType === 'BlankNode' && x.value.startsWith('_:'))
+			x.value = x.value.substring(2)
+	}
+}
+
 
 interface Ldo_interface {
 	_template:object;
@@ -20,6 +33,7 @@ export class Ldo implements Ldo_interface
 	{
 		const result = save_ldo(this, [])
 		let quads:any = await jsonld.toRDF(result, {});
+		quads.forEach(fix_digitalbazaar_quad);
 		console.log('saved quads:')
 		console.log(quads/*[1].object.datatype.value*/)
 		return quads

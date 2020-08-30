@@ -1,7 +1,7 @@
 import * as n from 'n3';
 const df = n.DataFactory;
 
-export const M = "http://rdf/mrkev#";
+export const M = "https://rdf.lodgeit.net.au/mrkev#";
 export const RDF = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
 export const URI_HIERARCHICAL_NOTES = M + 'hierarchical_notes';
 export const URI_PLAINTEXT = M + 'plain_text';

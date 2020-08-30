@@ -56,5 +56,8 @@
 		width: 1em;
 		height: 1em;
 	}
+	input, select {
+		width: 20%;
+	}
 
 </style>

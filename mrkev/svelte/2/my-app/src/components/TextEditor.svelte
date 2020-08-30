@@ -2,9 +2,11 @@
 
 	import {generate_unique_uri, df} from '../lib/quads.js';
 	import {log} from '../lib/log_store.js';
-	import {add_quad, add_quads} from '../lib/quad_store.js';
+	import {add_quad} from '../lib/quad_store.js';
 	import {reinterpret_element_contents_as_hierarchical_notes,editorElement,siblingElementByClass} from '../lib/actions.js';
 	import {saveAs} from 'file-saver';
+
+	let editor;
 
 	function addCode(cls)
 	{
@@ -18,9 +20,14 @@
 
 	function saveText()
 	{
-		const editor = document.getElementById("editor");
-		var blob = new Blob([editor.innerHTML], {type: "text/plain;charset=utf-8"});
+		var blob = new Blob([editor.innerText], {type: "text/plain;charset=utf-8"});
 		saveAs(blob, "hello world.txt");
+	}
+
+	function saveHtml()
+	{
+		var blob = new Blob([editor.innerHTML], {type: "text/plain;charset=utf-8"});
+		saveAs(blob, "hello world.html");
 	}
 
 
@@ -32,7 +39,6 @@
 			event.preventDefault();  // this will prevent us from tabbing out of the editor
 			if (event.shiftKey) log('should unindent');
 			// now insert four non-breaking spaces for the tab key
-			var editor = event.target;
 			var doc = editor.ownerDocument;
 			var win = doc.defaultView;
 			var sel = win.getSelection();
@@ -46,15 +52,6 @@
 			sel.removeAllRanges();
 			sel.addRange(range);
 		}
-	}
-
-
-	var last_unique_uri_number = -1;
-
-
-	function uri(text)
-	{
-		return text;
 	}
 
 
@@ -123,7 +120,7 @@
 	text document:
 
 	<pre>
-		<div class="editor" contenteditable="true" on:keydown={onEditorKeydown} on:change={onChange}>
+		<div bind:this={editor} class="editor" contenteditable="true" on:keydown={onEditorKeydown} on:change={onChange}>
 			blablabla<br/>
 		</div>
 		<div class="html_view">
@@ -132,6 +129,7 @@
 	<button on:click={on_reinterpret_as_hierarchical_notes}>reinterpret_as_hierarchical_notes</button>
 	<button on:click={makeSpan}>selection to rdf</button>
 	<button on:click={saveText}>saveText</button>
+	<button on:click={saveHtml}>saveHtml</button>
 	<button on:click={saveAll}>saveAll</button>
 </div>
 

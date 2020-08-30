@@ -1,11 +1,20 @@
 import {PrefixDeclaration,prefix_store} from './prefix_store.ts';
 import {get} from "svelte/store";
 
+export function prefixes_as_dict()
+{
+	const r:any = {}
+	get(prefix_store).forEach((x:PrefixDeclaration) => {
+		r[x.prefix] = x.uri
+	});
+	return r
+}
+
 export function try_to_shorten_uri(uri:string)
 {
 	const matches:Array<PrefixDeclaration> =
 		get(prefix_store).filter(
-			(prefix_declaration:PrefixDeclaration) => {uri.startsWith(prefix_declaration.uri)})
+			(prefix_declaration:PrefixDeclaration) => uri.startsWith(prefix_declaration.uri))
 	if (matches.length == 0)
 		return;
 	matches.sort(function(a:PrefixDeclaration, b:PrefixDeclaration) {

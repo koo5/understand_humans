@@ -9,7 +9,7 @@
 	import {fetch_dataset} from '../lib/rdf_io.js';
 	import {RDF, M, URI_PLAINTEXT} from  '../lib/quads.js';
 	import {reinterpret_element_contents_as_hierarchical_notes} from '../lib/actions.js';
-
+	import {quad_store_save} from "../lib/quad_store";
 	//import ldo_test from '../lib/.ts';
 
 	import * as N3 from 'n3';
@@ -40,7 +40,9 @@
 		/*console.log(kb);
 		console.log(kb.getQuads(null, null, null));*/
 
-		forAllEditorsAsync((div) => {reinterpret_element_contents_as_hierarchical_notes(div)});
+		await forAllEditorsAsync((div) => {reinterpret_element_contents_as_hierarchical_notes(div)});
+
+		quad_store_save()
 
 	}
 
@@ -112,7 +114,6 @@
 
 </script>
 
-<main>
 	<hr>
 	hierarchical notes view:
 	<ul>
@@ -134,19 +135,11 @@
 	<a href="https://github.com/koo5/understand_humans/blob/master/mrkev/svelte/1/my-svelte-project/docs/scenario1.md">scenario1</a>
 	<a href="https://github.com/koo5/understand_humans/blob/master/mrkev/svelte/1/my-svelte-project/docs/scenario2.md">scenario2</a>
 	<hr>
-</main>
 
 
 
 <style>
-
 	main {
+		padding: 0 1px;
 	}
-
-	h1 {
-		color: #ff3e00;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
 </style>
