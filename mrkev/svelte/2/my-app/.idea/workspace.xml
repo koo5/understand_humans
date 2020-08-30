@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c6fa276c-bfd6-4802-9b30-d80fa80a01df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TextEditor.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextEditor.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/reinterpret.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reinterpret.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/ldo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ldo.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +90,7 @@
       <workItem from="1598567250367" duration="97000" />
       <workItem from="1598567372438" duration="4000" />
       <workItem from="1598568047763" duration="230000" />
-      <workItem from="1598611626693" duration="69913000" />
+      <workItem from="1598611626693" duration="71968000" />
     </task>
     <servers />
   </component>
@@ -199,6 +197,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="360" y="173" width="554" height="367" key="jetbrains.nodejs.interpreters-dialog/0.0.1280.720/1280.720.1280.720@0.0.1280.720" timestamp="1598390303056" />
+    <state x="302" y="154" key="run.anything.popup" timestamp="1598777823762">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="302" y="154" key="run.anything.popup/0.0.1920.1080/1920.1080.1920.1080@0.0.1920.1080" timestamp="1598777823762" />
     <state x="455" y="60" width="1011" height="1019" key="search.everywhere.popup" timestamp="1598751589989">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

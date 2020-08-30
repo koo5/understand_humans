@@ -1,14 +1,23 @@
 import * as jsonld from 'jsonld';
 import {Term} from 'n3';
 
-function fix_digitalbazaar_quad(quad:any)
+
+/* see also
+https://github.com/rdfjs-base/parser-jsonld/blob/6b200a9286c20ce6c03c83b76186740678964e17/lib/ParserStream.js#L38
+and
+https://github.com/digitalbazaar/jsonld.js/issues/243
+ */
+function fix_jsonldjs_quad(quad:any)
 {
-	quad.equals = Term.prototype.equals;
-	for (const x of [quad.subject, quad.predicate, quad.object, quad.graph])
+	for (const x of [quad, quad.subject, quad.predicate, quad.object, quad.graph])
 	{
 		x.equals = Term.prototype.equals
 		if (x.termType === 'BlankNode' && x.value.startsWith('_:'))
 			x.value = x.value.substring(2)
+		if (x.termType === 'NamedNode' && x.value.startsWith('null:/'))
+			// remove null:/ workaround for relative IRIs
+			x.value = x.value.slice(6)
+        }
 	}
 }
 
@@ -33,7 +42,7 @@ export class Ldo implements Ldo_interface
 	{
 		const result = save_ldo(this, [])
 		let quads:any = await jsonld.toRDF(result, {});
-		quads.forEach(fix_digitalbazaar_quad);
+		quads.forEach(fix_jsonldjs_quad);
 		console.log('saved quads:')
 		console.log(quads/*[1].object.datatype.value*/)
 		return quads
