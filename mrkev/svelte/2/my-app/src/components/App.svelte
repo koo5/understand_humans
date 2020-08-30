@@ -9,7 +9,7 @@
 	import {fetch_dataset} from '../lib/rdf_io.js';
 	import {RDF, M, URI_PLAINTEXT} from  '../lib/quads.js';
 	import {reinterpret_element_contents_as_hierarchical_notes} from '../lib/actions.js';
-	import {quad_store_save} from "../lib/quad_store";
+	import {quad_store_save_as_file_download} from "../lib/quad_store";
 	//import ldo_test from '../lib/.ts';
 
 	import * as N3 from 'n3';
@@ -19,37 +19,18 @@
 
 	async function load()
 	{
-
-		/*
-		console.log('llllllllllllllllllll')
-
-		let a =  df.namedNode('banana')
-		let b =  df.namedNode(':banana')
-		let q = df.quad(a,b,a)
-
-		const store = new N3.Store();
-		store.addQuad(q)
-		const writer = new N3.Writer({ prefixes: { c: 'http://example.org/cartoons#' } });
-		writer.addQuad(q);
-		writer.end((error, result) => console.log((error, result)));
-		*/
-
-
 		//ldo_test();
 		kb = await fetch_dataset();
 		/*console.log(kb);
 		console.log(kb.getQuads(null, null, null));*/
-
-		await forAllEditorsAsync(async (div) => {await reinterpret_element_contents_as_hierarchical_notes(div)});
-
-		await quad_store_save()
-
 	}
 
 	onMount(async () =>
 	{
 		const res = await load();
 		finished_loading();
+		await forAllEditorsAsync(async (div) => {await reinterpret_element_contents_as_hierarchical_notes(div)});
+		await quad_store_save_as_file_download()
 	});
 
 	function finished_loading()
@@ -115,7 +96,7 @@
 </script>
 
 	<hr>
-	hierarchical notes view:
+	todo hierarchical notes view:
 	<ul>
 		<li>xxx</li>
 		<li>yy</li>
@@ -124,6 +105,8 @@
 	<TextEditor></TextEditor>
 	<hr>
 	<Quads></Quads>
+	<hr>
+	todo html view
 	<hr>
 	<Log></Log>
 	<hr>

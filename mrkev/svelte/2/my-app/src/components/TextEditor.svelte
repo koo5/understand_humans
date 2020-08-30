@@ -121,7 +121,20 @@
 
 	<pre>
 		<div bind:this={editor} class="editor" contenteditable="true" on:keydown={onEditorKeydown} on:change={onChange}>
-			blablablabla<br/>
+This is a text document. It is also a test document.<br/>
+It can be stored in a text file.
+Files can be categorized by:
+	extension:
+		pdf
+		txt
+		...
+	size:
+		big
+		small
+		just right
+This is a short document but it hopes to be useful.
+		sometimes we indent too much
+<br>
 		</div>
 		<div class="html_view">
 		</div>

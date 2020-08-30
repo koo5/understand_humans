@@ -40,8 +40,8 @@ export class Ldo implements Ldo_interface
 	}
 	async save()
 	{
-		const result = save_ldo(this, [])
-		let quads:any = await jsonld.toRDF(result, {});
+		const my_jsonld = save_ldo(this, [])
+		let quads:any = await jsonld.toRDF(my_jsonld, {});
 		quads.forEach(fix_jsonldjs_quad);
 		console.log('saved quads:')
 		console.log(quads/*[1].object.datatype.value*/)

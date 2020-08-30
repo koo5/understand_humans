@@ -24,7 +24,7 @@ export function add_quads(quads)
 
 
 
-export function quad_store_save()
+export function quad_store_save_as_file_download()
 {
 	const writer = new N3.Writer({ prefixes: prefixes_as_dict() });
 	/*console.log(get(quad_store))
