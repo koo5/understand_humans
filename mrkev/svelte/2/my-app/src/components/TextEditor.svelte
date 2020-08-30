@@ -121,7 +121,7 @@
 
 	<pre>
 		<div bind:this={editor} class="editor" contenteditable="true" on:keydown={onEditorKeydown} on:change={onChange}>
-			blablabla<br/>
+			blablablabla<br/>
 		</div>
 		<div class="html_view">
 		</div>

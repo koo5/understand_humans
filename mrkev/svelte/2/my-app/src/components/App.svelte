@@ -40,9 +40,9 @@
 		/*console.log(kb);
 		console.log(kb.getQuads(null, null, null));*/
 
-		await forAllEditorsAsync((div) => {reinterpret_element_contents_as_hierarchical_notes(div)});
+		await forAllEditorsAsync(async (div) => {await reinterpret_element_contents_as_hierarchical_notes(div)});
 
-		quad_store_save()
+		await quad_store_save()
 
 	}
 

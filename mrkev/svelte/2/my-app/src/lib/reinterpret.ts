@@ -20,7 +20,8 @@ const templates = {
 			'@context':
 				{
 					"m": "https://rdf.lodgeit.net.au/mrkev#",
-					"notes": "m:note_has_items",
+					"body": "m:note_has_body",
+					"children": "m:note_has_children",
 					"author": "m:note_has_author",
 				},
 			'@type': 'm:note'
@@ -45,7 +46,7 @@ export function new_document()
 
 export function new_note(body:Ldo)
 {
-	return new Ldo(templates.note, {body: body})
+	return new Ldo(templates.note, {body: body, children: []})
 }
 
 export const new_span = (text:string) => new Ldo(templates.span, {value:text})
@@ -60,8 +61,9 @@ export function reinterpret_as_hierarchical_notes(text:string)
 	lines.forEach((line) =>
 	{
 		let note = new_note(new_span(line.trim()))
-		let i = indents(line)
+		note.indent = indents(line)
 		make_note_a_child_of_note_with_lower_indent_or_of_root(root, note, notes)
+		notes.push(note)
 	});
 	return root;
 }
@@ -69,7 +71,7 @@ export function reinterpret_as_hierarchical_notes(text:string)
 function make_note_a_child_of_note_with_lower_indent_or_of_root(root:Ldo, note:Ldo, notes:Array<Ldo>) {
 	for (let i = notes.length - 1; i >= 0; i--) {
 		let x = notes[i];
-		if (x.indent < note.ident) {
+		if (x.indent < note.indent) {
 			x.children.push(note)
 			return
 		}
@@ -84,15 +86,10 @@ get number of tabs at beginning of string
 export function indents(line:string): number
 {
 	let result = 0;
-	while(true)
+	while(line.substr(0,1) == "\t")
 	{
-		if (line.length == 0)
-			break;
-		if (line.substr(0,1) == "\t") {
-			line = line.substring(1)
-			result++;
-		}
-		else break;
+		line = line.substring(1)
+		result++;
 	}
 	return result;
 }
