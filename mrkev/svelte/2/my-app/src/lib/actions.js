@@ -1,4 +1,4 @@
-import {add_quads} from './quad_store.js';
+import {quads} from '../stores.js';
 import {reinterpret_as_hierarchical_notes} from './reinterpret.ts';
 
 export function editorElement(sibling_element)
@@ -20,6 +20,6 @@ export function siblingElementByClass(cls, sibling_element)
 export async function reinterpret_element_contents_as_hierarchical_notes(element)
 {
 	const ldo = reinterpret_as_hierarchical_notes(editorElement(element).innerText);
-	const quads = await ldo.save()
-	add_quads(quads)
+	const quads/*:RdfDataSet*/ = await ldo.save()
+	quads.addQuads(quads)
 }

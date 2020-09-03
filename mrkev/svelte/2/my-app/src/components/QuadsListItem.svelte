@@ -23,7 +23,7 @@
 
 	function changeQuad()
 	{
-		//let quad = quad[0];
+		// this would be wrong
 		quad.s = quad.s + 'XXX';
 	}
 

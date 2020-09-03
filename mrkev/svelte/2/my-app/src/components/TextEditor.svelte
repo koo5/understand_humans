@@ -2,7 +2,7 @@
 
 	import {generate_unique_uri, df} from '../lib/quads.js';
 	import {log} from '../lib/log_store.js';
-	import {quads} from '/stores.js';
+	import {quads} from '../stores.js';
 	import {reinterpret_element_contents_as_hierarchical_notes,editorElement,siblingElementByClass} from '../lib/actions.js';
 	import {saveAs} from 'file-saver';
 
@@ -62,11 +62,9 @@
 		const span = wrap_selection(editor);
 		span.dataset.uri = generate_unique_uri('span');
 		quads.addQuad(
-			df.quad(
-				span.dataset.uri,
-				new suri('mrkev', 'value'),
-				df.literal(text_of_span(span))
-			)
+			span.dataset.uri,
+			new suri('mrkev', 'value'),
+			df.literal(text_of_span(span))
 		);
 	}
 

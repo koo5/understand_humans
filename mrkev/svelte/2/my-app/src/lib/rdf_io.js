@@ -25,7 +25,7 @@ async function load_dataset(n3_text)
 			if (error)
 				console.log(error);
 			if (quad)
-				kb.addQuads([quad]);
+				kb.push(quad);
 		});
 	/*console.log("n3 text loaded:");
 	console.log(kb);*/

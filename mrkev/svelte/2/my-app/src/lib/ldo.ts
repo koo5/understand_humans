@@ -11,13 +11,12 @@ function fix_jsonldjs_quad(quad:any)
 {
 	for (const x of [quad, quad.subject, quad.predicate, quad.object, quad.graph])
 	{
-		x.equals = Term.prototype.equals
+		x.equals = Term.prototype.equals;
 		if (x.termType === 'BlankNode' && x.value.startsWith('_:'))
-			x.value = x.value.substring(2)
+			x.value = x.value.substring(2);
 		if (x.termType === 'NamedNode' && x.value.startsWith('null:/'))
 			// remove null:/ workaround for relative IRIs
-			x.value = x.value.slice(6)
-        }
+			x.value = x.value.slice(6);
 	}
 }
 

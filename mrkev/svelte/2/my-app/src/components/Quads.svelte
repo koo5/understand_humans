@@ -1,6 +1,6 @@
 <script>
 	import QuadsListItem from './QuadsListItem.svelte';
-	import {quads, quad_store_save_as_file_download} from '/stores.js';
+	import {quads, quad_store_save_as_file_download} from '../stores.js';
 
 </script>
 

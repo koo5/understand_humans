@@ -1,8 +1,8 @@
-import {new_quad_store} from "lib/quad_store/quad_store.js";
+import {new_quad_store} from "./lib/quad_store/quad_store.ts";
 import * as N3 from 'n3';
 import {prefixes_as_dict} from './lib/prefixes';
 import {get} from 'svelte/store';
-import {quad_store} from './lib/quad_store';
+import {saveAs} from 'file-saver';
 
 export const quads = new_quad_store();
 

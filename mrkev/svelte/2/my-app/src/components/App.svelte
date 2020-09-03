@@ -9,8 +9,7 @@
 	import {fetch_dataset} from '../lib/rdf_io.js';
 	import {RDF, M, URI_PLAINTEXT} from  '../lib/quads.js';
 	import {reinterpret_element_contents_as_hierarchical_notes} from '../lib/actions.js';
-	import {quad_store_save_as_file_download, add_quads} from "../lib/quad_store";
-	//import ldo_test from '../lib/.ts';
+	import {quad_store_save_as_file_download, quads} from '../stores.js';
 
 	import * as N3 from 'n3';
 	const df = N3.DataFactory;
@@ -19,7 +18,7 @@
 
 	async function load()
 	{
-		add_quads(await fetch_dataset())
+		quads.addQuads(await fetch_dataset())
 	}
 
 	onMount(async () =>
