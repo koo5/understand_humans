@@ -17,7 +17,7 @@ export async function fetch_dataset()
 
 async function load_dataset(n3_text)
 {
-	const kb = new N3.Store();
+	const kb = [];
 	const parser = new N3.Parser({format: 'N3'});
 	await parser.parse(n3_text,
 		(error, quad, prefixes) =>
