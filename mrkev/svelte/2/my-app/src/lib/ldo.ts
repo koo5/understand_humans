@@ -1,5 +1,5 @@
 import * as jsonld from 'jsonld';
-import {Term} from 'n3';
+import * as n3 from 'n3';
 
 
 /* see also
@@ -7,16 +7,36 @@ https://github.com/rdfjs-base/parser-jsonld/blob/6b200a9286c20ce6c03c83b76186740
 and
 https://github.com/digitalbazaar/jsonld.js/issues/243
  */
-function fix_jsonldjs_quad(quad:any)
+/*function fix_jsonldjs_quad(quad:any)
 {
 	for (const x of [quad, quad.subject, quad.predicate, quad.object, quad.graph])
 	{
+
+		//nope, this wouldn't work
 		x.equals = Term.prototype.equals;
+
 		if (x.termType === 'BlankNode' && x.value.startsWith('_:'))
 			x.value = x.value.substring(2);
 		if (x.termType === 'NamedNode' && x.value.startsWith('null:/'))
 			// remove null:/ workaround for relative IRIs
 			x.value = x.value.slice(6);
+	}
+}*/
+
+function n3lib_term(plainTerm: any): n3.Term
+{
+	switch (plainTerm.termType)
+	{
+		case 'NamedNode':
+			return n3.DataFactory.namedNode(plainTerm.value)
+		case 'BlankNode':
+			return n3.DataFactory.blankNode(plainTerm.value.substr(2))
+		case 'Literal':
+			return n3.DataFactory.literal(plainTerm.value, plainTerm.language || n3.DataFactory.namedNode(plainTerm.datatype.value))
+		case 'DefaultGraph':
+			return n3.DataFactory.defaultGraph()
+		default:
+			throw Error('unknown termType: ' + plainTerm.termType)
 	}
 }
 
@@ -41,10 +61,10 @@ export class Ldo implements Ldo_interface
 	{
 		const my_jsonld = save_ldo(this, [])
 		let quads:any = await jsonld.toRDF(my_jsonld, {});
-		quads.forEach(fix_jsonldjs_quad);
+		let quads2 = quads.map(n3lib_term);
 		console.log('saved quads:')
-		console.log(quads/*[1].object.datatype.value*/)
-		return quads
+		console.log(quads2/*[1].object.datatype.value*/)
+		return quads2
 	}
 }
 
