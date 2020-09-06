@@ -65,11 +65,11 @@
 
 	var populate_editor_with_document = function (editor_element, doc_uri)
 	{
-		var root = kb.getQuads(doc_uri, M + "root_uri", null)[0].object;
+		var root = quads.getQuads(doc_uri, M + "root_uri", null)[0].object;
 
-		if (kb.getQuads(root, RDF + "type", URI_PLAINTEXT).length != 0)
+		if (quads.getQuads(root, RDF + "type", URI_PLAINTEXT).length != 0)
 		{
-			var value = kb.getQuads(root, M + 'value', null)[0].object.value;
+			var value = quads.getQuads(root, M + 'value', null)[0].object.value;
 			/*console.log("adding value:");
 			console.log(value);*/
 			editor_element.innerText += value;

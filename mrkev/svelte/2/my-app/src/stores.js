@@ -13,16 +13,16 @@ export function quad_store_save_as_file_download()
 	get(quad_store).forEach((i) => writer.addQuad(i));
 	get(quad_store).forEach((i) => console.log(i));
 	console.log(writer)*/
-	const quads = get(quads)
-	console.log(quads)
+	const q = get(quads)
+	//console.log(q)
 	const cb = (x) => {if (x)console.log(x)}
-	for (var i = 0; i < quads.length; i++)
-		writer.addQuad(quads[i],cb);
-	console.log(writer)
+	for (var i = 0; i < q.length; i++)
+		writer.addQuad(q[i],cb);
+	//console.log(writer)
 	writer.end((error, result) => {
 		if (error)
 			throw error;
-		var blob = new Blob([result], {type: "text/plain;charset=utf-8"});
+		let blob = new Blob([result], {type: "text/plain;charset=utf-8"});
 		saveAs(blob, "hello world.trig");
 	})
 }

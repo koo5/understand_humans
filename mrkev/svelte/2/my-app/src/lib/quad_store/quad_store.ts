@@ -30,7 +30,11 @@ class Store extends N3.Store
 
 	addQuads(x:any)
 	{
-		if (super.addQuads(x))
+		let changed = false;
+		for (var i = 0; i < x.length; i++)
+			if (super.addQuad(x[i]))
+				changed = true;
+		if (changed)
 			this.fire()
 	}
 }

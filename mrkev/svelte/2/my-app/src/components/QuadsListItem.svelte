@@ -43,12 +43,10 @@
 <li>
 
 	<button class="destroy" title="delete" on:click={handleRemove}>x</button>
-	<br>
 	<RdfNodeEditor bind:node={quad.subject}></RdfNodeEditor>
 	<RdfNodeEditor bind:node={quad.predicate}></RdfNodeEditor>
 	<RdfNodeEditor bind:node={quad.object}></RdfNodeEditor>
 	<RdfNodeEditor bind:node={quad.graph}></RdfNodeEditor>
-	<br>
 	<button title="logQuad" on:click={logQuad}>logQuad</button>
 	<button title="changeQuad" on:click={changeQuad}>changeQuad</button>
 	<span>

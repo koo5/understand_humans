@@ -23,7 +23,12 @@ https://github.com/digitalbazaar/jsonld.js/issues/243
 	}
 }*/
 
-function n3lib_term(plainTerm: any): n3.Term
+function n3lib_quad(x: any): n3.Quad
+{
+	return n3.DataFactory.quad(n3lib_term(x.subject), n3lib_term(x.predicate), n3lib_term(x.object), n3lib_term(x.graph))
+}
+
+function n3lib_term(plainTerm: any): any
 {
 	switch (plainTerm.termType)
 	{
@@ -61,9 +66,9 @@ export class Ldo implements Ldo_interface
 	{
 		const my_jsonld = save_ldo(this, [])
 		let quads:any = await jsonld.toRDF(my_jsonld, {});
-		let quads2 = quads.map(n3lib_term);
-		console.log('saved quads:')
-		console.log(quads2/*[1].object.datatype.value*/)
+		let quads2 = quads.map(n3lib_quad);
+		/*console.log'saved quads:')
+		console.log(quads2)*/
 		return quads2
 	}
 }
@@ -95,8 +100,8 @@ function save_ldo(something:any, seen:any[]):any
 		for (const property of Object.getOwnPropertyNames(x))
 		{
 			if (['_template', '_id_template'].includes(property)) continue;
-			console.log('property:')
-			console.log(`${property}: ${x[property]}`);
+			/*console.log('property:')
+			console.log(`${property}: ${x[property]}`);*/
 			result[property] = save_ldo(x[property], seen)
 		}
 	}
@@ -114,7 +119,7 @@ function save_ldo(something:any, seen:any[]):any
 	}
 	else
 		result = something;
-	console.log('result:')
-	console.log(result)
+	/*console.log('result:')
+	console.log(result)*/
 	return result;
 }

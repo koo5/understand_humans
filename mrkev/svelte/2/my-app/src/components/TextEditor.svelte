@@ -98,11 +98,6 @@
 		view.innerText = e.target.innerHTML;
 	}
 
-	async function on_reinterpret_as_hierarchical_notes(e)
-	{
-		await reinterpret_element_contents_as_hierarchical_notes(e.target)
-	}
-
 </script>
 
 <div class="mrkev_div">
@@ -137,7 +132,7 @@ This is a short document but it hopes to be useful.
 		<div class="html_view">
 		</div>
 	</pre>
-	<button on:click={on_reinterpret_as_hierarchical_notes}>reinterpret_as_hierarchical_notes</button>
+	<button on:click={reinterpret_element_contents_as_hierarchical_notes(editor)}>reinterpret_as_hierarchical_notes</button>
 	<button on:click={makeSpan}>selection to rdf</button>
 	<button on:click={saveText}>saveText</button>
 	<button on:click={saveHtml}>saveHtml</button>
