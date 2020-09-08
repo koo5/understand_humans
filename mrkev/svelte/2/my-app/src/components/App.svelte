@@ -15,77 +15,22 @@
 	const df = N3.DataFactory;
 
 
+	let editor;
 
-	async function load()
+	async function add_static_dataset_to_store()
 	{
 		quads.addQuads(await fetch_dataset())
 	}
 
 	onMount(async () =>
 	{
-		await load();
-		finished_loading();
-		await forAllEditorsAsync(async (div) => {await reinterpret_element_contents_as_hierarchical_notes(div)});
-		await quad_store_save_as_file_download()
+		await add_static_dataset_to_store();
+		editor.populate_editor_with_document()
+		//debugger;
+		editor.reinterpret_text_as_hierarchical_notes();
+		//await quad_store_save_as_file_download()
 	});
 
-	function finished_loading()
-	{
-		event__kb_updated_for_page();
-	}
-
-	function event__kb_updated_for_page()
-	{
-		forAllEditors((div) => {event__kb_updated_for_frame(div)});
-	}
-
-	function forAllEditors(fn)
-	{
-		for (let div of document.getElementsByClassName("mrkev_div"))
-			fn(div);
-	}
-
-	async function forAllEditorsAsync(fn)
-	{
-		for (let div of document.getElementsByClassName("mrkev_div"))
-			await fn(div);
-	}
-
-	function event__kb_updated_for_frame(div)
-	{
-		update_frame(div);
-	}
-
-	function update_frame(frame)
-	{
-		var editor_element = (frame.getElementsByClassName('editor'))[0];
-		var doc_uri = frame.getElementsByClassName('doc_uri_selector')[0].value;
-		populate_editor_with_document(editor_element, doc_uri);
-	}
-
-	var populate_editor_with_document = function (editor_element, doc_uri)
-	{
-		var root = quads.getQuads(doc_uri, M + "root_uri", null)[0].object;
-
-		if (quads.getQuads(root, RDF + "type", URI_PLAINTEXT).length != 0)
-		{
-			var value = quads.getQuads(root, M + 'value', null)[0].object.value;
-			/*console.log("adding value:");
-			console.log(value);*/
-			editor_element.innerText += value;
-		}
-		/*
-		for (node in objects(doc_uri, children))
-		{
-			if is text:
-				add span
-			if is hierarchical_note
-				add div
-				add value
-				add children
-
-		}*/
-	}
 
 
 
@@ -98,7 +43,7 @@
 		<li>yy</li>
 	</ul>
 	<hr>
-	<TextEditor></TextEditor>
+	<TextEditor bind:this={editor}></TextEditor>
 	<hr>
 	<Quads></Quads>
 	<hr>
@@ -108,7 +53,7 @@
 	<hr>
 	<Prefixes></Prefixes>
 	<hr>
-	<button on:click={load}>load</button>
+	<button on:click={add_static_dataset_to_store()}>add_static_dataset_to_store</button>
 	<hr>
 	help: <a href="https://github.com/koo5/understand_humans/blob/master/mrkev/svelte/1/my-svelte-project/README.md">readme</a>
 	<a href="https://github.com/koo5/understand_humans/blob/master/mrkev/svelte/1/my-svelte-project/docs/scenario1.md">scenario1</a>

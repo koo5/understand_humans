@@ -19,7 +19,9 @@ export function siblingElementByClass(cls, sibling_element)
 
 export async function reinterpret_element_contents_as_hierarchical_notes(element)
 {
+	//debugger;
 	const ldo = reinterpret_as_hierarchical_notes(element.innerText);
 	const x/*:RdfDataSet*/ = await ldo.save()
+	console.log(x);
 	quads.addQuads(x)
 }

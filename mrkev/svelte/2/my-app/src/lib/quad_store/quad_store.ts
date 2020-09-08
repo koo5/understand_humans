@@ -18,6 +18,7 @@ class Store extends N3.Store
 
 	fire()
 	{
+//		debugger;
 		let value = this.value;
 		this.subscriptions.forEach((subscription) => subscription(value));
 	}

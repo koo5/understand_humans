@@ -1,12 +1,51 @@
 <script>
 
-	import {generate_unique_uri, df} from '../lib/quads.js';
+	import {generate_unique_uri, df, M, RDF, URI_PLAINTEXT} from '../lib/quads.js';
 	import {log} from '../lib/log_store.js';
 	import {quads} from '../stores.js';
 	import {reinterpret_element_contents_as_hierarchical_notes,editorElement,siblingElementByClass} from '../lib/actions.js';
 	import {saveAs} from 'file-saver';
 
 	let editor;
+	let doc_uri_selector;
+
+	export function reinterpret_text_as_hierarchical_notes()
+	{
+		//debugger;
+		reinterpret_element_contents_as_hierarchical_notes(editor)
+	}
+
+	export function populate_editor_with_document()
+	{
+		populate_editor_with_chosen_document(doc_uri_selector.value);
+	}
+
+	function populate_editor_with_chosen_document(doc_uri)
+	{
+		var root = quads.getQuads(doc_uri, M + "root_uri", null)[0].object;
+
+		if (quads.getQuads(root, RDF + "type", URI_PLAINTEXT).length != 0)
+		{
+			var value = quads.getQuads(root, M + 'value', null)[0].object.value;
+			/*console.log("adding value:");
+			console.log(value);*/
+			editor.innerText += value;
+		}
+		/*
+		for (node in objects(doc_uri, children))
+		{
+			if is text:
+				add span
+			if is hierarchical_note
+				add div
+				add value
+				add children
+
+		}*/
+	}
+
+
+
 
 	function addCode(cls)
 	{
@@ -103,7 +142,7 @@
 <div class="mrkev_div">
 	<div>
 		<!-- note: in firefox, the dropdown menu doesn't appear until you delete current text -->
-		<input class="doc_uri_selector" type="text" name="dataset" list="known_datasets" value="http://rdf/dataset1"/>
+		<input bind:this={doc_uri_selector} class="doc_uri_selector" type="text" name="dataset" list="known_datasets" value="http://rdf/dataset1"/>
 		<datalist id="known_datasets">
 			<option value="http://rdf/dataset1">dataset1</option>
 			<option value="dataset2">dataset2</option>
@@ -132,7 +171,7 @@ This is a short document but it hopes to be useful.
 		<div class="html_view">
 		</div>
 	</pre>
-	<button on:click={reinterpret_element_contents_as_hierarchical_notes(editor)}>reinterpret_as_hierarchical_notes</button>
+	<button on:click={reinterpret_text_as_hierarchical_notes(editor)}>reinterpret_text_as_hierarchical_notes</button>
 	<button on:click={makeSpan}>selection to rdf</button>
 	<button on:click={saveText}>saveText</button>
 	<button on:click={saveHtml}>saveHtml</button>
