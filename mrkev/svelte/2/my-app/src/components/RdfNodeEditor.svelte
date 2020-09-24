@@ -1,8 +1,10 @@
 <script>
 
+
+
 	import SvelteTooltip from 'svelte-tooltip';
 	import {rdf_node_textual_representation} from '../lib/quads.js';
-
+	import {rdf_node_parsing_result} from '../lib/quads.js';
 
 
 	// popover hack https://github.com/sveltejs/sapper/issues/774
@@ -15,14 +17,21 @@
 	// /popover hack
 
 
-	import {rdf_node_parsing_result} from '../lib/quads.js';
+
 
 	export let node;
+	export let ignore_empty = false
+
+
 	let errors = null;
+
 
 	function on_change(e)
 	{
-		const r = rdf_node_parsing_result(e.target.value);
+		const textbox_contents_string = e.target.value;
+		if (textbox_contents_string === '' && ignore_empty)
+
+		const r = rdf_node_parsing_result(textbox_contents_string);
 		if ('errors' in r)
 			errors = r.errors;
 		else

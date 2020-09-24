@@ -81,7 +81,7 @@ export function rdf_node_textual_representation(x)
 	if (x.termType == 'DefaultGraph')
 		return 'default graph!'
 	if (x.termType == 'BlankNode')
-		return x.value
+		return "_:" + x.value
 	return "some " + x.termType
 }
 

@@ -104,3 +104,8 @@ n1 a note; value "wrong tabbing behavior"; children (
         [a note; value "unless configurable?"])]
 
 ```
+
+
+## possible future directions
+https://pikes.fbk.eu/model.html
+https://dkm-static.fbk.eu/people/rospocher/files/pubs/2016tkde.pdf
