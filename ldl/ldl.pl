@@ -28,6 +28,7 @@ print_tabling_tables :-
 
 %:- table(parse(_,_,_,_,first)).
 
+/*G is for Grammar, Spec is the start symbol, In,Out have the same sense as in a DCG i think (operating over a list of characters here), and Node is the AST*/
 parse(G, Spec, In, Out, Node) :- 
 	print_node(Node),
 	catch_with_backtrace(
