@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="341f95a6-1e66-4daa-9876-24e38c71ee3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/svelte/2/my-app/src/stores.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/svelte/2/my-app/src/stores/quad_store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svelte/2/my-app/src/components/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/svelte/2/my-app/src/components/App.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svelte/2/my-app/src/lib/quad_store.js" beforeDir="false" afterPath="$PROJECT_DIR$/svelte/2/my-app/src/lib/quad_store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svelte/2/my-app/src/lib/rdf_io.js" beforeDir="false" afterPath="$PROJECT_DIR$/svelte/2/my-app/src/lib/rdf_io.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mrkev.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mrkev.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/svelte/2/my-app/src/lib/ldo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/svelte/2/my-app/src/lib/ldo.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +33,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/svelte/2/my-app/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -54,6 +53,9 @@
       <workItem from="1597876965049" duration="598000" />
       <workItem from="1597926557278" duration="690000" />
       <workItem from="1598993240147" duration="616000" />
+      <workItem from="1601595140919" duration="2305000" />
+      <workItem from="1601841452814" duration="1839000" />
+      <workItem from="1602024963386" duration="1569000" />
     </task>
     <servers />
   </component>
@@ -61,6 +63,12 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1440" y="741" width="623" height="638" key="find.popup" timestamp="1602025029234">
+      <screen x="1280" y="720" width="1280" height="720" />
+    </state>
+    <state x="160" y="21" width="614" height="638" key="find.popup/0.0.1280.720/1280.720.1280.720/2560.1440.1280.720@0.0.1280.720" timestamp="1601841471727" />
+    <state x="1440" y="741" width="623" height="638" key="find.popup/0.0.1280.720/1280.720.1280.720/2560.1440.1280.720@1280.720.1280.720" timestamp="1602025029234" />
+    <state x="320" y="42" width="811" height="638" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1601601724207" />
     <state x="302" y="41" width="674" height="678" key="search.everywhere.popup" timestamp="1597229175743">
       <screen x="0" y="0" width="1280" height="720" />
     </state>

@@ -2,48 +2,11 @@ import * as jsonld from 'jsonld';
 import * as n3 from 'n3';
 
 
-/* see also
-https://github.com/rdfjs-base/parser-jsonld/blob/6b200a9286c20ce6c03c83b76186740678964e17/lib/ParserStream.js#L38
-and
-https://github.com/digitalbazaar/jsonld.js/issues/243
- */
-/*function fix_jsonldjs_quad(quad:any)
-{
-	for (const x of [quad, quad.subject, quad.predicate, quad.object, quad.graph])
-	{
 
-		//nope, this wouldn't work
-		x.equals = Term.prototype.equals;
+import * as interop from 'ld-lib-interop';
+// git@github.com:koo5/ld-lib-interop
 
-		if (x.termType === 'BlankNode' && x.value.startsWith('_:'))
-			x.value = x.value.substring(2);
-		if (x.termType === 'NamedNode' && x.value.startsWith('null:/'))
-			// remove null:/ workaround for relative IRIs
-			x.value = x.value.slice(6);
-	}
-}*/
 
-function n3lib_quad(x: any): n3.Quad
-{
-	return n3.DataFactory.quad(n3lib_term(x.subject), n3lib_term(x.predicate), n3lib_term(x.object), n3lib_term(x.graph))
-}
-
-function n3lib_term(plainTerm: any): any
-{
-	switch (plainTerm.termType)
-	{
-		case 'NamedNode':
-			return n3.DataFactory.namedNode(plainTerm.value)
-		case 'BlankNode':
-			return n3.DataFactory.blankNode(plainTerm.value.substr(2))
-		case 'Literal':
-			return n3.DataFactory.literal(plainTerm.value, plainTerm.language || n3.DataFactory.namedNode(plainTerm.datatype.value))
-		case 'DefaultGraph':
-			return n3.DataFactory.defaultGraph()
-		default:
-			throw Error('unknown termType: ' + plainTerm.termType)
-	}
-}
 
 
 interface Ldo_interface {

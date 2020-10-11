@@ -13,3 +13,9 @@ https://frdcsa.org/frdcsa/internal/architect https://frdcsa.org/frdcsa/minor/sys
 https://github.com/jbalint/banshee-sympatico
 
 
+## omniterm/ldl/cnl/nl interface
+
+The user interface can take a couple of forms. 
+
+
+### text input box
