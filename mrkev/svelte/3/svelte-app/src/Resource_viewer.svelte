@@ -6,12 +6,12 @@
 	export let indexes;
 	export let uri = null;
 
-	$: presenter_uri = q(indexes['spog'][uri],'presenter_uri');
+	$: presenter_uri = q(q(indexes['spgo'][uri],'presenter_uri'),'@default');
 
 </script>
 
 <span>
 see {uri}:
-	<Hideable_presentation_selector presenter_uri={presenter_uri}></Hideable_presentation_selector>
+	<Hideable_presentation_selector indexes={indexes} presenter_uri={presenter_uri}></Hideable_presentation_selector>
 
 </span>
