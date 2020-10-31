@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="341f95a6-1e66-4daa-9876-24e38c71ee3d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/svelte/3/svelte-app/src/preferences.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/svelte/3/svelte-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/svelte/3/svelte-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/svelte/3/svelte-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/svelte/3/svelte-app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/svelte/3/svelte-app/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/svelte/3/svelte-app/src/App.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/svelte/3/svelte-app/src/Hideable_presentation_selector.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/svelte/3/svelte-app/src/Hideable_presentation_selector.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/svelte/3/svelte-app/src/Resource_viewer.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/svelte/3/svelte-app/src/Resource_viewer.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/svelte/3/svelte-app/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/svelte/3/svelte-app/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/svelte/3/svelte-app/src/q.js" beforeDir="false" afterPath="$PROJECT_DIR$/svelte/3/svelte-app/src/q.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/svelte/3/svelte-app/src/stores.js" beforeDir="false" afterPath="$PROJECT_DIR$/svelte/3/svelte-app/src/stores.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
