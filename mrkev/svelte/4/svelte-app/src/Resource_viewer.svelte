@@ -39,7 +39,45 @@
 		{#if type === q("robust:reportset")}
 			these are the reports we generated for you:
 			<ul>
-				{#each rdf_list_to_array(q_singleton(uri, u('robust:items'))) as report}
+				<!-- so let's say, there is:
+				q(uri, u('robust:items'))
+				@default graph is assumed.
+				you get a list of results
+				each result is {value, annotations}
+				annotations might be represented simply by a list of contexts.
+				Let's say we pass this to an AnnotationViewer,
+				then, each context can be passed to a ResourceViewer maybe?
+
+
+Reports:
+abc
+def
+ghi
+
+let’s not forget that it’s the multiplicity of the whole reportset that we’re dealing with here.
+So, while the normal rendering might be without any boxes or whatever, a rendering in case of multiple reportsets should indicate the multiplicity somehow:
+
+Reports:
+multiple nodes:
+-----
+abc
+def
+ghi
+------
+-----
+123
+456
+789
+------
+
+-->
+
+				let's see if that could maybe be a different node type:
+				<QueryResultViewer s={uri} p={u('robust:items')}/>
+
+
+
+				{#each rdf_list_to_array(q_singleton)) as report}
 					<li><svelte:self uri={report}/></li>
 				{/each}
 			</ul>
@@ -49,8 +87,11 @@
 
 </span>
 
+<style>
 
 	/*
+
+
 	if we take it to the extreme,
 	0) an annotation can be annotated.
 	1) rdf2:is_part_of can be annotated.
@@ -61,3 +102,13 @@
 	One interesting use of this would be to compare versions of documents (or rather, compare reportsets resulting from different runs, in this case)
 
 	*/
+
+
+/*
+				{#each rdf_list_to_array(q_singleton(uri, u('robust:items'))) as report}
+					<li><svelte:self uri={report}/></li>
+				{/each}
+*/
+
+</style>
+
