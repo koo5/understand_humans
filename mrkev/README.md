@@ -1,13 +1,13 @@
 # MRKEV - Markup Rdf Knowledge Editor and Viewer
 
 ## usage scenarios
-[docs/scenario1.md](docs/scenario1.md) and [docs/scenario2.md](docs/scenario2.md) provide some clues.
+	[docs/scenario1.md](docs/scenario1.md) and [docs/scenario2.md](docs/scenario2.md) provide some clues.
 
 ## current version
-development currently happens in [mrkev/svelte/2/my-app](mrkev/svelte/2/my-app)
+	development currently happens in [mrkev/svelte/2/my-app](mrkev/svelte/2/my-app)
 
 ## these pieces are being worked out:
-	### a quad store
+	### js quad store
 		saving/loading with N3.js. UI components for editing quads and prefixes. 
 		
 	### RDFQ
@@ -23,8 +23,8 @@ development currently happens in [mrkev/svelte/2/my-app](mrkev/svelte/2/my-app)
 		turn a tab-indented text with hierarchical notes into a rdf description of that hierarchy.
 		
 	### TextEditor
-		using contenteditable to edit text. Buttons to mark up pieces of text, and link them to literals asserted in the store. Adding a two-way synchronization is possible. These annotated pieces are called Spans. Additional assertions can be created about Spans. Hierarchical notes are composed of Spans too.  
-		Saving/loading of a rdf representation of the text, along with all quads.
+		using contenteditable to edit text. Buttons for marking up pieces of text, and linking them to literals asserted in the store. Adding a two-way synchronization is possible. These annotated pieces are called Spans. Additional assertions can be created about Spans. Hierarchical notes are composed of Spans.  
+		Saving/loading of a rdf representation of text, along with all additional quads.
 		
 	### notes tree
 		a viewer of hierarchical notes as a tree.
@@ -37,8 +37,12 @@ development currently happens in [mrkev/svelte/2/my-app](mrkev/svelte/2/my-app)
 ### hypertext and semantic web
 https://monoskop.org/images/b/be/Nelson_Ted_Literary_Machines_c1987_chs_0-1.pdf
 
+## related projects
+### https://www.cubicweb.org/project/cubicweb-linked-data-browser
+is under active development.
+
 ## similar projects
-http://say-editor.com
+### http://say-editor.com
 * mrkev aims to support hypergraphs, while say-editor is more of a lightweight RDFa markup tool
 * say-editor has a nice plugin system for automatic detection of machine-interpretable parts of text and providing specialized micro-editors, mrkev should try to re-use these plugins
 
@@ -56,44 +60,7 @@ this will make sure that the text is wrapped in a <span> element, an uri is gene
 basic quads management.
 
 ## notes
-this note is also an example of my hierarchical notes structure:
-```
-frontend editors tabbing behavior
-
-
-	right tabbing behavior
-		https://microsoft.github.io/monaco-editor/index.html
-
-		https://ace.c9.io/
-
-		https://www.cdolivet.com/editarea/editarea/exemples/exemple_full.html
-			almost, it also indents the line where the cursor is, in addition to selected lines.
-
-		https://repl.it/
-			change setting to tabs
-			somewhat weird behavior in cursor position after selection is dismissed
-
-		https://icecoder.net/
-			(probably), change setting to tabs
-
-		https://codemirror.net/
-			probably, change setting to tabs and see https://github.com/codemirror/CodeMirror/issues/2428
-
-
-	wrong tabbing behavior
-		https://jsfiddle.net/
-			unless configurable?
-
-		https://www.gitpod.io/
-			unless configurable?
-
-		https://medv.io/codejar/
-			unless configurable?
-
-	?
-		http://say-editor.com
-```
-it would be rdf-ized like this:
+see notes/browser_based_editor_widgets. This note is also an example of my hierarchical notes structure. It would be rdf-ized somewhat like this:
 ```
 n1 a note; value "wrong tabbing behavior"; children (
     [a note; value "https://jsfiddle.net/"; about [a sw; homepage "https://jsfiddle.net/"]; children (
@@ -105,7 +72,6 @@ n1 a note; value "wrong tabbing behavior"; children (
 
 ```
 
-
 ## possible future directions
-https://pikes.fbk.eu/model.html
-https://dkm-static.fbk.eu/people/rospocher/files/pubs/2016tkde.pdf
+	https://pikes.fbk.eu/model.html
+	https://dkm-static.fbk.eu/people/rospocher/files/pubs/2016tkde.pdf
