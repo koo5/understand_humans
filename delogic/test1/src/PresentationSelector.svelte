@@ -16,6 +16,9 @@
 <div>
 	<div>
 		presentation selection strategy:
+
+		<UriRadio tgt={{store:ws, subj:uri, pred:"rkev:presentation_selection_strategy"}}/>
+
 		<label>
 			<input type=radio bind:group={strategy} value={"manual"}>
 			Manual

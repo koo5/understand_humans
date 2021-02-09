@@ -1,3 +1,4 @@
+<script src=quadstore.js></script>
 <script>
 
 	export let uri;

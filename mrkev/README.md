@@ -1,4 +1,4 @@
-# MRKEV - Markup Rdf Knowledge Editor and Viewer
+# MRKEV - Markup RDF Knowledge Editor/Viewer
 
 ## see also
 	https://github.com/koo5/hackery2/blob/master/notes/augmented_text.txt
