@@ -1,10 +1,29 @@
 # MRKEV - Markup Rdf Knowledge Editor and Viewer
 
-## usage scenarios
-	[docs/scenario1.md](docs/scenario1.md) and [docs/scenario2.md](docs/scenario2.md) provide some clues.
+## see also
+	https://github.com/koo5/hackery2/blob/master/notes/augmented_text.txt
 
-## current version
-	development currently happens in [mrkev/svelte/2/my-app](mrkev/svelte/2/my-app)
+
+## resources
+### hypertext and semantic web
+https://monoskop.org/images/b/be/Nelson_Ted_Literary_Machines_c1987_chs_0-1.pdf
+
+## related projects
+### https://www.cubicweb.org/project/cubicweb-linked-data-browser
+is under active development.
+
+## possible future directions
+	https://pikes.fbk.eu/model.html
+	https://dkm-static.fbk.eu/people/rospocher/files/pubs/2016tkde.pdf
+
+
+## similar projects
+### http://say-editor.com
+* mrkev aims to support hypergraphs, while say-editor is more of a lightweight RDFa markup tool
+* say-editor has a nice plugin system for automatic detection of machine-interpretable parts of text and providing specialized micro-editors, mrkev should try to re-use these plugins
+
+https://github.com/renerocksai/sublimeless_zk
+
 
 ## these pieces are being worked out:
 	### js quad store
@@ -33,20 +52,13 @@
 		Quad Viewer - similar to some other templating projects (https://github.com/koo5/hackery2/blob/master/src/data/notes/rdf_visualization.txt)
 		The difference is support for hypergraphs. Generic rdf exploration as well as hardcoded renderers for our domain-specific object types.
 
-## resources
-### hypertext and semantic web
-https://monoskop.org/images/b/be/Nelson_Ted_Literary_Machines_c1987_chs_0-1.pdf
+## usage scenarios
+	[docs/scenario1.md](docs/scenario1.md) and [docs/scenario2.md](docs/scenario2.md) provide some clues.
 
-## related projects
-### https://www.cubicweb.org/project/cubicweb-linked-data-browser
-is under active development.
+## current version
+	development currently happens in [mrkev/svelte/2/my-app](mrkev/svelte/2/my-app)
 
-## similar projects
-### http://say-editor.com
-* mrkev aims to support hypergraphs, while say-editor is more of a lightweight RDFa markup tool
-* say-editor has a nice plugin system for automatic detection of machine-interpretable parts of text and providing specialized micro-editors, mrkev should try to re-use these plugins
 
-https://github.com/renerocksai/sublimeless_zk
 
 ## what to implement - first thoughts
 1) select some text in the editor area.
@@ -72,6 +84,3 @@ n1 a note; value "wrong tabbing behavior"; children (
 
 ```
 
-## possible future directions
-	https://pikes.fbk.eu/model.html
-	https://dkm-static.fbk.eu/people/rospocher/files/pubs/2016tkde.pdf

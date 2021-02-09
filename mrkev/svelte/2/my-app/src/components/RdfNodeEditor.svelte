@@ -1,7 +1,5 @@
 <script>
 
-
-
 	import SvelteTooltip from 'svelte-tooltip';
 	import {rdf_node_textual_representation} from '../lib/quads.js';
 	import {rdf_node_parsing_result} from '../lib/quads.js';

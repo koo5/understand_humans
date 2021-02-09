@@ -1,0 +1,41 @@
+a "formal" way to obtain all quads in a graph is to do what the store does, that is, iterate all `quad(s,p,o,g)`, interpret `includes(g1,g2)`, and recurse.
+
+
+
+
+
+
+
+
+
+
+smw
+stardog BI integrations
+
+
+
+
+Micro Frontends
+
+
+
+https://homepages.cwi.nl/~paulk/publications/TOSEM03.pdf
+
+
+
+https://blog.logrocket.com/build-an-ssr-web-app-with-firebase-functions-hosting-and-svelte-sapper/
+
+
+
+
+
+https://stackoverflow.com/questions/62153716/authentication-in-sapper-svelte-in-graphql-api
+
+
+
+
+http://antoniogarrote.github.io/semantic-ko/example4.html
+
+
+
+

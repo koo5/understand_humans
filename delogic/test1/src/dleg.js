@@ -1,0 +1,3 @@
+/*blah*/
+export gah(q) => {};
+

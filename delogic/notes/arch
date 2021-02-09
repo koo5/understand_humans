@@ -1,0 +1,125 @@
+
+
+js -> ts -> wasm
+	https://github.com/MichaReiser/speedy.js/issues/60
+		https://github.com/AssemblyScript/assemblyscript
+
+
+lang review 2021
+
+	semi-dead
+		https://github.com/mozart/
+
+	alive but barely
+		curry
+			ide
+				https://www-ps.informatik.uni-kiel.de/currywiki/tools/editors
+				https://www.informatik.uni-kiel.de/~pakcs/COOSy/
+				!!! 
+					www.informatik.uni-kiel.de/~mh/slides/PADL04.pdf
+					https://www-ps.informatik.uni-kiel.de/currywiki/tools/icode
+					
+	
+	semi-dead and semi-closed
+		qi/shen
+			ide
+				https://groups.google.com/g/qilang/c/I9yuwpBqxyU
+			
+		
+	alive
+		mercury
+		
+
+
+
+
+https://www.w3schools.com/tags/tag_details.asp
+
+
+
+
+# i'm collecting notes here that have been scattered across many places, and not all of them are immediately relevant for "delogic". Will reorganize later.
+
+====
+
+
+
+
+* robust frontend
+	* pages
+		* request page
+			* bound to url: /request/{id}
+			* components:
+				* status text:
+					* completed
+					* completed, with alerts
+					* completed, with error
+					* processing
+					* other (payment required, pending, failed, ..)
+				* alerts
+				* reports
+			
+
+* robust/cubicweb/promnesia sneaky
+	* implementations
+		* greasemonkey script
+		* firefox extensions api - promnesia
+		* mitmproxy - useless with modern web apps (facebook...)
+		
+
+
+
+
+http://adam.chlipala.net/cpdt/ warning :w.
+https://proofgeneral.github.io/ warning :w.
+https://coq.inria.fr/user-interfaces.html warning :w.
+
+--------
+
+
+jballint has the chrome extension, that sends events to the database, and then searches the database from emacs. For firefox, he suggested that i build it with webextensions api, but actually there is already a suitable project: https://beepb00p.xyz/promnesia.html
+
+it can actually be thought of as two separate functionalities of the extension: sending info to the backend, and displaying info
+
+and, well, according to my latest research, i think at least epiphany browser is integrated with tracker(backend) or maybe zeitgeist, and that's queryable with synapse(an omnibar)
+
+there may be a couple other projects/integrations like that, like KRunner
+
+what i discussed with you was the proxy to insert annotations directly into webpages
+
+
+
+
+
+
+
+
+
+
+# tau
+
+at this point:
+i still don't have a good understanding of the weird pyramid that HMC proposed:
+	at the bottom there's datalog
+	datalog interprets type theory
+	datalog interprets lambda calculus, that's weird
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Achievements in logic programming are listed; some techniques developed for other languages are pointed out, and some trends for further research are drawn. Among the main achievements are algorithmic debugging, tracing for sequential Prolog, and abstract interpretation. The main missing techniques are slicing, test case generation, and program mutation. The perspectives we see are integration, evaluation, and above all, automated static and dynamic analysis.
+- https://www.sciencedirect.com/science/article/pii/0743106694900302
