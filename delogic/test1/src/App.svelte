@@ -1,28 +1,15 @@
 <script>
 
-	import { readable, derived, writable } from 'svelte/store';
-	import Keypad from './Keypad.svelte';
+	import QS from './my_quadstore';
 
-	let pin = writable("111");
+	let { a } = QS;
 
-	$: view = $pin ? $pin.replace(/\d(?!$)/g, '•') : 'enter your pin';
+	a();
 
-	function handleSubmit() {
-		alert(`submitted ${$pin}`);
-	}
 </script>
 
-<h1 style="color: {$pin ? '#333' : '#ccc'}">{view}</h1>
-
-<Keypad bind:value={$pin} on:submit={handleSubmit}/>
+<main>
 
 
-<text
 
-<!--
-
-	<main>
-		<Outer url="http://something"/>
-	</main>
-
--->
+</main>

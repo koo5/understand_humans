@@ -1,5 +1,16 @@
 import { readable, derived, writable } from 'svelte/store';
 
+
+
+let my_quadstore = {
+
+	a: () =>
+	{
+		console.log('aaa');
+	}
+}
+
+
 /*
 These functions return svelte stores, that is, objects that you can subscribe() to and be notified of changes. See https://svelte.dev/tutorial/readable-stores
 
@@ -8,9 +19,14 @@ These svelte stores will, in turn, be notified when the underlying quadstore cha
 
 
 
-export const quadstore = writable([]);
+export const quadstore = (quads) =>
+{
+query: (q) => derived(quadstore, $quadstore => {filter_quads_by_query(q,$quadstore)});
 
-export query(q) => derived(quadstore, $quadstore => {filter_quads_by_query(q,$quadstore)});
+
+
+}
+
 
 
 
