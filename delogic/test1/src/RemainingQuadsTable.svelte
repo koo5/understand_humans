@@ -1,10 +1,10 @@
 <script>
-
-	export let uri, quads;
+	import { Table } from 'sveltestrap';
+	export let quads;
 
 </script>
 
-<table class="table">
+<table bordered>
 	<thead>
 	<tr>
 		<th scope="col">idx</th>
@@ -16,10 +16,10 @@
 	<tbody>
 	{#each quads as quad (quad.idx)}
 		<tr>
-			<th scope="row">quad.idx</th>
-			<td>quad.p</td>
-			<td>quad.o</td>
-			<td>quad.g</td>
+			<th scope="row">{quad.idx}</th>
+			<td>{quad.p}</td>
+			<td>{quad.o}</td>
+			<td>{quad.g}</td>
 		</tr>
 	{/each}
 	</tbody>

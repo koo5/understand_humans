@@ -22,7 +22,8 @@
 <main>
 
 	<button on:click|preventDefault='{() => addquad()}'>Add</button>
-
+	<br>
+	<h3>the quadstore is now:</h3>
 	<ul>
 		{#each ($result) as r (r.idx)}
 			<li>{JSON.stringify(r,null,' ')}</li>
@@ -30,6 +31,7 @@
 	</ul>
 
 	<hr>
+	<h3>viewing <code>"&#60;x&#62;"</code>:</h3>
 	<Outer uri="<x>"/>
 
 </main>
