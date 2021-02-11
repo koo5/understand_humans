@@ -35,3 +35,6 @@
 	<Outer uri="<x>"/>
 
 </main>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<small><a href="https://github.com/koo5/understand_humans/tree/master/delogic/test1">f**k me on github.</a></small>
