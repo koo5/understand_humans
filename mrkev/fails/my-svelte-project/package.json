@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "file-saver": "^2.0.2",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "n3": "^1.6.2",
     "sirv-cli": "^1.0.6",
     "svelte-i18n": "^3.0.4",
