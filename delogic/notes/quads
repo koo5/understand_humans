@@ -1,0 +1,17 @@
+# option 1 - quads are required to have unique graphs
+
+{s p o g
+ where g equals pouch _idx
+ by extension, _idx is a unique graph / unique quad identifier.
+ 
+ 
+ 
+
+# option 2 - current rdf data compatible
+{s p o g
+ where g need not be unique
+ 
+ unique identification of quads:
+	 "i" as part of query
+	 pouchdb can generate whatever it wants
+	 

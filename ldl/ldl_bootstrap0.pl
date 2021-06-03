@@ -33,7 +33,8 @@ probably introduce lists, or at least one_or_more_separated_with. zero_or_more_s
 	clause ++> fact,
 	fact ++> [body:term],
 	clause ++> rule,
-	rule ++> [head:term, whitespace+, ":-", whitespace+, body:term],
+	rule ++> [head:term, whitespace+, ":-", whitespace+, body:term
+],
 	
 	
 

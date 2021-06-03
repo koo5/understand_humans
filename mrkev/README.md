@@ -15,7 +15,11 @@ is under active development.
 ## possible future directions
 	https://pikes.fbk.eu/model.html
 	https://dkm-static.fbk.eu/people/rospocher/files/pubs/2016tkde.pdf
-
+	https://www.swyx.io/svelte-amplify-datastore/
+	https://github.com/kuhlaid/svelte2
+	https://dexie.org/
+	https://vasturiano.github.io/react-force-graph/example/custom-node-shape/index-canvas.html
+	https://vasturiano.github.io/react-force-graph/example/text-nodes/index-2d.html
 
 ## similar projects
 ### http://say-editor.com

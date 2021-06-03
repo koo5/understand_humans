@@ -1,0 +1,14 @@
+Libreoffice scripts section:
+```
+Sub GetAnnotations(oSheet as Object, HeaderLine as String)
+Dim oNotes as Object
+Dim n as Integer
+	oNotes = oSheet.getAnnotations
+	If oNotes.hasElements() then
+		MakeLogHeadLine(HeaderLine)
+		For n = 0 to oNotes.Count-1
+			WriteStringtoLogFile(oNotes.GetbyIndex(n).String)
+		Next
+	End if
+End Sub
+```

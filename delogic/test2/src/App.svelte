@@ -31,7 +31,7 @@
 	<br>
 	<h3>the quadstore is now:</h3>
 	rrr {JSON.stringify(result.subscribe, null,' ')} rrr
-rrrrrrsss
+
 	rrr {JSON.stringify(xxx, null,' ')} rrr
 	<ul>
 		{#each ($result) as r (r.idx)}
