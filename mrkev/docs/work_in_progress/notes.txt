@@ -1,0 +1,27 @@
+# The syncing engine
+
+This is a followup/review to previous notes, mainly scenario1 and 2.
+
+| i fill in `subject`: <products:accounts_assessor>. I click `add`, and the triple appears in the list of manually-added triples. Somewhat under the hood, the "Accounts Assessor" bit of the document is now marked up with the information that it should stay in sync with the object of the triple.
+
+^ this implies one mode of interlinking documents with data - that of explictily adressing a particular part of a particular triple,
+so, this may be, in enriched markdown, expressed like so: `{(triple)triple27(position)object}blabla{/}`.
+I *think* this is below the level of abstraction we want to work on - we want to look at our knowledgebase as entailing some world model, rather than micromanage triples.
+
+A higher-level interlinking may look like so:
+```
+# {products:accounts_assessor project_name}Accounts Assessor{/} - introduction
+```
+(first line of accounts-assessor readme).
+Two n3 nodes/atoms, "products:accounts_assessor" and "project_name" are understood as subject and predicate of a triple that the engine would query/assert.
+
+Next, we are adding some unlinked triples:
+
+| <products:robust has_codebase <codebases:labs_accounts_assessor>.
+| <products:robust has_codebase <codebases:LodgeITSmart>.
+
+I *think* it may be useful to have a syntax for adding arbitrary triples to documents, will see how this pans out in practice, wrt syncing. It should be comparable to adding/managing these triples directly in the kb. Which brings me to: what is the kb? It's either a rdf file that the sync tool uses/modifies, or a sparql endpoint. At any case, just a set of graphs, as usual.
+
+
+
+
