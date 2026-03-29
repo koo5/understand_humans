@@ -17,7 +17,7 @@
     "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^5.2.3"
   },
   "dependencies": {
     "lodash": "^4.17.19",
